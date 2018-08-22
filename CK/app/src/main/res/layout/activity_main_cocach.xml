@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Android.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frag_now"
+        android:name="com.ckjs.ck.View.Fragment.ThreeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/tv_line"
+        />
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ll_below"
+        android:background="@color/c_f6" />
+
+    <LinearLayout
+        android:paddingTop="2dp"
+        android:id="@+id/ll_below"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center"
+        android:background="@color/c_ffffff"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/tb_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textSize="10sp"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/activity_tab_margin"
+            android:textColor="@color/main_frag_tab_selector" />
+
+        <ToggleButton
+            android:id="@+id/tb_health"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:padding="@dimen/activity_tab_margin"
+            android:textColor="@color/main_frag_tab_selector" />
+
+
+        <ToggleButton
+            android:id="@+id/tb_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/activity_tab_margin"
+            android:textSize="10sp"
+            android:textColor="@color/main_frag_tab_selector" />
+    </LinearLayout>
+
+
+</RelativeLayout>

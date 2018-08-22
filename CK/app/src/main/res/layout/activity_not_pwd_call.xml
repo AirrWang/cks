@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical"
+    tools:context=".Android.ForgetPwdActivity">
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="48dp"
+        android:paddingBottom="46dp"
+        android:background="@color/c_ffffff"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:hint="手机号"
+            android:inputType="number"
+            android:paddingBottom="16dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="12dp"
+            android:paddingTop="36dp"
+            android:maxLength="11"
+            android:singleLine="true"
+
+            android:textSize="14dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/c_f2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/yzmCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/c_ffffff"
+                android:hint="验证码"
+                android:inputType="number"
+                android:paddingBottom="16dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="12dp"
+                android:paddingTop="16dp"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textColor="@color/c_66"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/yzmImage"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/btn_time_be"
+                android:paddingBottom="7dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="7dp"
+                android:textColor="@color/c_66"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/c_f2" />
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:hint="新密码：8-16位数字加字母组合"
+            android:maxLength="16"
+            android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890*^%$#@!~?./-+\][,\=_{}|`:;'"
+            android:inputType="textPassword"
+            android:paddingBottom="16dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="12dp"
+            android:paddingTop="16dp"
+            android:singleLine="true"
+            android:textColor="@color/c_66"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/c_f2" />
+        <EditText
+            android:maxLength="16"
+            android:id="@+id/editTextPasswordTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890*^%$#@!~?./-+\][,\=_{}|`:;'"
+            android:hint="确认密码"
+            android:inputType="textPassword"
+            android:paddingBottom="16dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="12dp"
+            android:paddingTop="16dp"
+            android:singleLine="true"
+            android:textColor="@color/c_66"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/c_f2" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="96dp"
+            android:layout_marginRight="96dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_item_jh"
+            android:text="@string/forget_pwd_activity_sure"
+            android:textColor="@color/c_FFFDFD" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

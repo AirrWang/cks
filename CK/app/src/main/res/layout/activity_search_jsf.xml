@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center_vertical"
+        android:background="@color/c_33"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mine_search_back"
+            android:paddingLeft="10dp"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@drawable/calendar_icon2_left"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn"/>
+
+        <TextView
+            android:id="@+id/tv_select_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="北京市"
+            android:textColor="@color/c_ffffff"/>
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_search"
+            android:layout_marginLeft="2dp"
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@drawable/down_up"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/c_ffffff"
+            android:gravity="center"
+            android:maxLength="10"
+            android:hint="请输入关键字搜索健身房..."
+            android:textColor="@color/c_33"
+            android:textSize="14sp"/>
+
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="58dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_rectangle_circl_5"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/c_ffffff"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/mine_search_jsf"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/c_f2"
+        android:dividerHeight="10dp"
+        android:scrollbars="none"/>
+</LinearLayout>

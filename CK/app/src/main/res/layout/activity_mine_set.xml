@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mine_set2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Android.MineModule.Activity.MineSetActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ListView
+        android:id="@+id/listViewSetting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:dividerHeight="1dp"
+        android:divider="@color/c_f2">
+    </ListView>
+</RelativeLayout>

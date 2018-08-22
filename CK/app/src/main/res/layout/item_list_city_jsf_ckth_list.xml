@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:paddingLeft="12dp"
+    android:paddingTop="12dp">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/sd_to_jsf"
+        android:layout_toStartOf="@+id/sd_to_jsf"
+        android:text="TextView"
+        android:textColor="@color/c_33"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView19"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/fea21249"
+        android:textSize="16sp"></TextView>
+
+
+    <LinearLayout
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView21"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:text="TextView"
+        android:textColor="@color/c_66"
+        android:textSize="12sp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/textViewDian"
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/vip_card"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn" />
+
+        <TextView
+            android:id="@+id/textViewDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="TextView"
+            android:textColor="@color/c_66"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView21"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@+id/textView38"
+        android:layout_toLeftOf="@+id/sd_to_jsf"
+        android:layout_toRightOf="@+id/textView38"
+        android:layout_toStartOf="@+id/sd_to_jsf"
+        android:text="TextView"
+        android:textColor="@color/c_66"
+        android:textSize="12sp" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/vip_card"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="TextView"
+            android:textColor="@color/c_66"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView21"
+        android:layout_alignTop="@+id/textView21"
+        android:layout_below="@+id/textView19"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/textView21"
+        android:layout_toLeftOf="@+id/sd_to_jsf"
+        android:layout_toRightOf="@+id/textView21"
+        android:layout_toStartOf="@+id/sd_to_jsf">
+
+        <TextView
+            android:id="@+id/textViewMoneyed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="left|center_vertical"
+            android:paddingRight="2dp"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/c_99"
+            android:textSize="12sp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_line"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:background="@color/c_99"-->
+        <!--android:gravity="center"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="TextView"-->
+        <!--android:textColor="@color/c_99" />-->
+    </RelativeLayout>
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_to_jsf"
+        android:layout_width="56dp"
+        android:layout_height="64dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="24dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="3"
+        fresco:placeholderImage="@drawable/home_arow"
+        fresco:placeholderImageScaleType="focusCrop"
+        fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn" />
+</RelativeLayout>

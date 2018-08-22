@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+    <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:background="@drawable/personal_circle"
+        android:layout_marginTop="62dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="109dp"
+        android:layout_height="109dp">
+        <TextView
+            android:id="@+id/wipe_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/c_33"
+            android:text="开始清除"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/wipe_jindu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="18sp"
+            android:textColor="@color/c_33"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mine_wipecache"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="91dp"
+        android:background="@color/fea21249"
+        android:gravity="center"
+        android:text="空间清理"
+        android:textSize="16sp"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

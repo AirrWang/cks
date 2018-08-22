@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    >
+<TextView
+    android:background="@color/c_f2"
+    android:layout_width="match_parent"
+    android:layout_height="10dp" />
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/custom_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@color/c_f2"
+            fresco:placeholderImageScaleType="focusCrop" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预约  人 :"
+                    android:textColor="@color/c_33"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_marginLeft="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="倪萍"
+                    android:textColor="@color/c_33"
+                    android:textSize="14sp"/>
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_marginLeft="12dp"
+                    android:id="@+id/custom_sex"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:fadeDuration="3"
+                    fresco:placeholderImage="@color/c_f2"
+                    fresco:placeholderImageScaleType="focusCrop" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预约类型："
+                    android:textColor="@color/c_33"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上门指导"
+                    android:textColor="@color/c07ac83"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地        址："
+                    android:textColor="@color/c_33"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/tv_di_zhi"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中国"
+                    android:textColor="@color/c_33"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收        益："
+                    android:textColor="@color/c_33"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/tv_shou_yi"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="@color/c07ac83"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+      <TextView
+          android:id="@+id/tv_timme"
+          android:paddingLeft="10dp"
+          android:paddingRight="10dp"
+          android:textColor="@color/c_99"
+          android:textSize="12sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

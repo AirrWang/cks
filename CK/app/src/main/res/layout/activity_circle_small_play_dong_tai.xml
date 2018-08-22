@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_circle_dong_tai"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_ffffff">
+
+    <include layout="@layout/toolbar">
+
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/c_ffffff"
+                android:hint="此刻的想法。。。"
+                android:padding="14dp"
+                android:textColor="@color/c_be" />
+
+            <include
+                android:id="@+id/sdAddIc"
+                layout="@layout/giraffe_player_small"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_below="@+id/textView18" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/textView20"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/sdAddIc"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="6dp"
+                android:onClick="toDwPlace"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImage="@drawable/dingwei_jsf"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+
+            <TextView
+                android:id="@+id/tv_palce"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_below="@+id/sdAddIc"
+                android:layout_toEndOf="@+id/textView20"
+                android:layout_toRightOf="@+id/textView20"
+                android:gravity="center_vertical"
+                android:onClick="toDwPlace"
+                android:singleLine="true"
+                android:textColor="@color/c_33" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/textView20"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/c_e6" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

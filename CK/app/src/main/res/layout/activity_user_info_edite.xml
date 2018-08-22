@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f2"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_ffffff"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/activity_user_info_edite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_item_bai"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/user_info_edite_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="38dp"
+                            android:layout_marginTop="38dp"
+                            android:text="头像"
+                            android:textColor="#333333"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mine_userpic"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            fresco:fadeDuration="1"
+                            fresco:placeholderImage="@color/c_f2"
+                            fresco:placeholderImageScaleType="focusCrop"
+                            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn"
+                            fresco:roundedCornerRadius="4dp"
+                            />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="10dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            fresco:placeholderImage="@drawable/change"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+                    <LinearLayout
+                        android:id="@+id/user_info_edite_petname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="昵称"
+                            android:textColor="@color/c_33"
+                            android:textColorHint="#333333"
+                            android:textSize="14sp"/>
+
+
+
+                        <EditText
+                            android:id="@+id/user_info_edite_petnametext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:background="#00000000"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="10dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            fresco:placeholderImage="@drawable/change"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="性别"
+                            android:textColor="@color/c_33"
+                            android:textColorHint="#333333"
+                            android:textSize="14sp"/>
+
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:id="@+id/user_info_edite_sextext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="60"
+                            android:singleLine="true"
+                            android:text="个性签名"
+                            android:textColor="@color/c_33"
+                            android:textColorHint="#333333"
+                            android:textSize="14sp"/>
+
+
+                        <EditText
+                            android:id="@+id/user_info_edite_signnametext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_weight="270"
+                            android:background="#00000000"
+                            android:gravity="right"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="10"
+                            fresco:placeholderImage="@drawable/change"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="年龄"
+                            android:textColor="#333333"
+                            android:textSize="14sp"/>
+
+
+                        <EditText
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:id="@+id/user_info_edite_agetext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:background="#00000000"
+                            android:enabled="false"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:singleLine="true"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="岁"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="10dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="生日"
+                            android:textColor="@color/c_33"
+                            android:textColorHint="#333333"
+                            android:textSize="14sp"/>
+
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:id="@+id/user_info_edite_bir_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="身高"
+                            android:textColor="#333333"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/user_info_edite_heighttext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:singleLine="true"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cm"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="10dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            fresco:placeholderImage="@drawable/change"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="体重"
+                            android:textColor="#333333"
+                            android:textSize="14sp"/>
+
+
+                        <EditText
+                            android:id="@+id/user_info_edite_weighttext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:gravity="right"
+                            android:inputType="numberDecimal"
+                            android:maxLength="6"
+                            android:singleLine="true"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="kg"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="10dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            fresco:placeholderImage="@drawable/change"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="手机号"
+                            android:textColor="@color/c_33"
+                            android:textColorHint="#333333"
+                            android:textSize="14sp"/>
+
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:id="@+id/user_info_edite_teltext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="真实姓名"
+                            android:textColor="@color/c_33"
+                            android:textColorHint="#333333"
+                            android:textSize="14sp"/>
+
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:id="@+id/user_info_edite_relnametext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_choose_gym"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:text="所属健身房"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mine_gym_icon_1"
+                            android:layout_width="22dp"
+                            android:layout_height="24dp"
+                            android:gravity="center_vertical"
+                            android:padding="3dp"
+                            fresco:placeholderImage="@drawable/my_member_icon_no"
+                            fresco:placeholderImageScaleType="focusCrop"
+                            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn"/>
+
+                        <TextView
+                            android:id="@+id/tv_mine_gymname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:singleLine="true"
+                            android:text="野生的健身者"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="10dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            fresco:placeholderImage="@drawable/change"
+                            fresco:placeholderImageScaleType="focusCrop"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

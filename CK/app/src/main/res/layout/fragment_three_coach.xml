@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/c_4491F2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="19dp"
+                    android:layout_marginTop="19dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:maxLength="14"
+                        android:id="@+id/tv_coach_todaymoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c_ffffff"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="今日收益"
+                        android:textColor="@color/c_ffffff"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/c_ffffff" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="累计收益:"
+                        android:textColor="@color/c_ffffff"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="账户余额:"
+                        android:textColor="@color/c_ffffff"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_coach_accumulated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c_ffffff"
+                        android:maxLength="14"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_coach_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/c_ffffff"
+                        android:maxLength="14"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/coach_touxiang"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    fresco:placeholderImage="@color/c_f2"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_coach_mine_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c_33"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_coach_mine_gymname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/c_33"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="星级评价"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp" />
+                        <LinearLayout
+                            android:layout_marginLeft="22dp"
+                            android:id="@+id/ll_coach_mine_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="带课量"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_coach_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dp"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_coach_mine_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/c_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    fresco:placeholderImage="@drawable/my_date_icon"
+                    fresco:placeholderImageScaleType="focusCrop" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="个人资料"
+                    android:textColor="@color/c_33"
+                    android:textSize="14sp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="16dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    fresco:placeholderImage="@drawable/personal_viewall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_coach_mine_tixian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/c_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    fresco:placeholderImage="@drawable/my_moey_icon"
+                    fresco:placeholderImageScaleType="focusCrop" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="申请提现"
+                    android:textColor="@color/c_33"
+                    android:textSize="14sp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="16dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    fresco:placeholderImage="@drawable/personal_viewall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_order_his"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/c_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    fresco:placeholderImage="@drawable/my_record_icon"
+                    fresco:placeholderImageScaleType="focusCrop" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="交易记录"
+                    android:textColor="@color/c_33"
+                    android:textSize="14sp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="16dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    fresco:placeholderImage="@drawable/personal_viewall" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_order_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/c_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    fresco:placeholderImage="@drawable/my_location_icon"
+                    fresco:placeholderImageScaleType="focusCrop" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="接单地点"
+                    android:textColor="@color/c_33"
+                    android:textSize="14sp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="16dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    fresco:placeholderImage="@drawable/personal_viewall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/c_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    fresco:placeholderImage="@drawable/my_record_service"
+                    fresco:placeholderImageScaleType="focusCrop" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="接单"
+                    android:textColor="@color/c_33"
+                    android:textSize="14sp" />
+
+                <Switch
+                    android:id="@+id/coach_mine_switch"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

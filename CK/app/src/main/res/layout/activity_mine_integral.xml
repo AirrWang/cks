@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2">
+    <include layout="@layout/toolbar"
+        />
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2a2a2a"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/text6"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView49"
+        android:background="?attr/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余"
+            android:textSize="20sp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/c_ffffff"/>
+        <TextView
+            android:id="@+id/tv_mine_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="45sp"
+            android:textColor="@color/c_4491F2"/>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="超空币"
+            android:textSize="20sp"
+            android:textColor="@color/c_ffffff"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="154dp"
+        android:background="@drawable/text_integral_circl"/>
+
+
+
+    <Button
+        android:gravity="center"
+        android:text="兑换"
+        android:textColor="@color/c_ffffff"
+        android:background="@drawable/ll_rectangle_circl_bloodpress"
+        android:textSize="14sp"
+        android:layout_width="95dp"
+        android:layout_height="30dp"
+        android:id="@+id/button2"
+        android:layout_marginBottom="7dp"
+        android:layout_alignBottom="@+id/textView49"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:background="@color/c_ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:id="@+id/text5"
+        android:layout_below="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="超空币获取规则"
+        android:textSize="14sp"
+        android:textColor="@color/c_33"/>
+    <ListView
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_ffffff"
+        android:layout_below="@+id/text5"
+        android:dividerHeight="1dp"
+        android:divider="@color/c_f2"
+        android:id="@+id/list_mine_integral" />
+    <TextView
+        android:layout_marginTop="1dp"
+        android:background="@color/c_ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/list_mine_integral"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="更多超空币敬请探索！"
+        android:textSize="14sp"
+        android:textColor="@color/c_33"/>
+
+
+</RelativeLayout>

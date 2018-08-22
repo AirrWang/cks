@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+
+android {
+/**
+ * Created by NiPing and Airr Wang
+ * Copyright  www.chaokongs.com. All rights reserved.
+ */
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.ckjs.ck"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 28
+        versionName "1.2.8.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "2fa15a214f68a4c8856bba03", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('D:\\CK\\ck.jks')
+            storePassword "ck10311237pm"
+            keyAlias "ck"
+            keyPassword "ck10311238pm"
+        }
+    }
+    productFlavors {
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/SocialSDK_QQZone_3.jar')
+    compile files('libs/SocialSDK_umengqq.jar')
+    compile files('libs/SocialSDK_umengsina.jar')
+    compile files('libs/umeng_social_view.jar')
+    //城市三级联动
+
+    //    compile 'com.mcxiaoke.ijk.media:ijkplayer-x86_64:0.6.2'
+
+    //    compile 'com.mcxiaoke.ijk.media:ijkplayer-x86:0.6.2'
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/SocialSDK_WeiXin_1.jar')
+    compile files('libs/SocialSDK_WeiXin_2.jar')
+    // 此处以JPush 3.0.0 版本为例。
+
+    // 此处以JCore 1.0.0 版本为例。
+    compile files('libs/alipaySdk-20161129.jar')
+    compile project(':myimagepickerModule')
+    //图片选择器
+
+    /**
+     *     图片放大缩小所需要的库
+     */
+
+    //图片放大缩小
+    compile files('libs/lite-orm-1.7.0.jar')
+    /**
+     *     环信的所需要的库
+     */
+
+    compile project(':myFloatingViewLib')
+    compile files('libs/Android_Map3D_SDK_V4.1.3_20161208.jar')
+    compile files('libs/AMap_Location_V3.3.0_20170118.jar')
+    compile files('libs/AMap_Search_V4.0.0_20170111.jar')
+    compile files('libs/hyphenatechat_3.3.2.jar')
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.facebook.fresco:fresco:0.14.1'
+    compile 'com.facebook.fresco:animated-gif:0.14.1'
+    compile 'com.android.support:design:22.2.1'
+    compile 'com.android.support:support-v4:25.1.1'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.bigkoo:pickerview:2.0.8'
+    compile 'com.mcxiaoke.ijk.media:ijkplayer-java:0.6.2'
+    compile 'com.mcxiaoke.ijk.media:ijkplayer-armv7a:0.6.2'
+    compile 'com.mcxiaoke.ijk.media:ijkplayer-armv5:0.6.2'
+    compile 'com.mcxiaoke.ijk.media:ijkplayer-arm64:0.6.2'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'cn.jiguang.sdk:jpush:3.0.6'
+    compile 'cn.jiguang.sdk:jcore:1.1.3'
+    compile 'me.relex:photodraweeview:1.1.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    testCompile 'junit:junit:4.12'
+    // 这里在 tools 中引入外部库是为了统一管理，以后的项目只需要引入这个 tools
+    // 订阅方式实现事件通知；代替 Handler 和广播
+    compile 'org.greenrobot:eventbus:3.0.0'
+}

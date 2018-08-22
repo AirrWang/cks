@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/activity_bao_ming"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            >
+
+            <!--<com.facebook.drawee.view.SimpleDraweeView-->
+                <!--android:id="@+id/ivSm"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:text="TextView"-->
+                <!--fresco:actualImageScaleType="focusCrop"-->
+                <!--fresco:fadeDuration="1"-->
+                <!--fresco:placeholderImage="@color/c_e6"-->
+                <!--fresco:placeholderImageScaleType="focusCrop"-->
+                <!--fresco:viewAspectRatio="2" />-->
+
+            <RelativeLayout
+                android:id="@+id/r_vp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff">
+
+                <com.ckjs.ck.Tool.ViewTool.AutoScrollViewPager
+                    android:id="@+id/vp_home_js_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_centerInParent="true" />
+
+                <LinearLayout
+                    android:id="@+id/ll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/vp_home_js_more"
+                    android:layout_alignRight="@+id/vp_home_js_more"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_point_bm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/r_vp"
+                android:layout_marginTop="8dp"
+                android:background="@color/c_ffffff">
+
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toLeftOf="@+id/textView28"
+                    android:layout_toStartOf="@+id/textView28"
+                    android:text="name"
+                    android:textColor="@color/c_33" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+
+                    android:gravity="right"
+                    android:text="已报名人数"
+                    android:textColor="@color/c_66" />
+
+                <TextView
+                    android:id="@+id/textViewTimeNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/textViewNum"
+                    android:layout_below="@+id/textViewName"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center_vertical"
+                    android:text="time"
+                    android:layout_toLeftOf="@+id/textViewNum"
+                    android:layout_toStartOf="@+id/textViewNum"
+                    android:textColor="@color/c_99"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/textViewNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textViewName"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="8dp"
+
+                    android:gravity="right"
+                    android:text="num"
+                    android:textColor="@color/fea21249" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textViewNum"
+                    android:background="@drawable/btn_time_hui"
+                    android:text="TextView" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/textView31"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView30"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_toLeftOf="@+id/textView32"
+                            android:layout_toStartOf="@+id/textView32"
+                            android:text="时长"
+                            android:textColor="@color/c_99" />
+
+                        <TextView
+                            android:id="@+id/textViewTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView31"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_toLeftOf="@+id/textView32"
+                            android:layout_toStartOf="@+id/textView32"
+                            android:text="30min"
+                            android:textColor="@color/fea21249" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_3"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/textView32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView30"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="12dp"
+                            android:text="燃脂"
+
+                            android:textColor="@color/c_99" />
+
+                        <TextView
+                            android:id="@+id/textViewCal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView32"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_toEndOf="@+id/textView31"
+                            android:layout_toRightOf="@+id/textView31"
+                            android:text="243kcal"
+
+                            android:textColor="@color/fea21249" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_2"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/textView33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/textView30"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_toEndOf="@+id/textView32"
+                            android:layout_toRightOf="@+id/textView32"
+                            android:gravity="right"
+                            android:text="动作"
+
+                            android:textColor="@color/c_99" />
+
+                        <TextView
+                            android:id="@+id/textViewAc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/textView33"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_toEndOf="@+id/textView32"
+                            android:layout_toRightOf="@+id/textView32"
+                            android:gravity="right"
+
+                            android:text="12个"
+                            android:textColor="@color/fea21249" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_js"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_marginTop="8dp"
+                android:background="@color/c_ffffff">
+
+                <TextView
+                    android:id="@+id/textViewNameJuB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toLeftOf="@+id/textViewAddress"
+
+                    android:layout_toStartOf="@+id/textViewAddress"
+                    android:text="举办方名称"
+                    android:textColor="@color/c_33" />
+
+                <TextView
+                    android:id="@+id/textViewAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/activity_location"
+                    android:drawablePadding="4dp"
+                    android:gravity="right"
+                    android:text="举办方地址"
+                    android:textColor="@color/c_66" />
+
+
+                <TextView
+                    android:id="@+id/textViewLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textViewAddress"
+                    android:background="@drawable/btn_time_hui" />
+
+
+                <TextView
+                    android:id="@+id/textViewJieShao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textViewLine"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="5dp"
+                    android:paddingBottom="16dp"
+                    android:text="介绍"
+                    android:textColor="@color/c_99" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button_bm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rl_js"
+                android:layout_marginLeft="72dp"
+                android:layout_marginRight="72dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_time_hui"
+                android:enabled="false"
+                android:text="报名参加"
+                android:textColor="@color/c_ffffff" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

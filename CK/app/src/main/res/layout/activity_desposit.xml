@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2">
+    <include layout="@layout/toolbar"/>
+    <TextView
+        android:id="@+id/tv_desposit_userid"
+        android:paddingTop="17dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:background="@color/c_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="会员ID:"
+        android:textColor="@color/c_33"/>
+    <TextView
+        android:id="@+id/tv_desposit_name"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:background="@color/c_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="姓名:"
+        android:textColor="@color/c_33"/>
+    <TextView
+        android:id="@+id/tv_desposit_tel"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:background="@color/c_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="电话:"
+        android:textColor="@color/c_33"/>
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:background="@color/c_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="17dp">
+        <TextView
+            android:textColor="@color/c_33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="押金: "/>
+        <TextView
+            android:id="@+id/tv_desposit"
+            android:textColor="@color/fea21249"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/c_ffffff"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付方式"
+            android:textSize="12sp"
+            android:textColor="@color/c_33"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/c_f2"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
+                    fresco:placeholderImage="@drawable/pay" />
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
+                    fresco:placeholderImage="@drawable/wechat_pay" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/desposit_zhifibao"
+                        android:checked="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                    <RadioButton
+                        android:id="@+id/desposit_weixin"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/c_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/order_desposit_price_total"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计:￥"
+            android:textSize="14dp"
+            android:textColor="@color/c_33"/>
+        <Button
+            android:id="@+id/submit_order_desposit"
+            android:background="@drawable/bg_order_btn"
+            android:text="提交订单"
+            android:textColor="@color/c_ffffff"
+            android:layout_width="150dp"
+            android:layout_height="49dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

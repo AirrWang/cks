@@ -1,0 +1,282 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c_f2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_line"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:id="@+id/r_my_tz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_circle_mine"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImage="@color/c_e6"
+                />
+
+            <TextView
+                android:id="@+id/textView_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_toEndOf="@+id/iv_circle_mine"
+                android:layout_toRightOf="@+id/iv_circle_mine"
+                android:singleLine="true"
+                android:textColor="@color/c_33"
+                android:textSize="@dimen/textView_username_tv_size" />
+
+            <TextView
+
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_username"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_toEndOf="@+id/iv_circle_mine"
+                android:layout_toRightOf="@+id/iv_circle_mine"
+                android:gravity="right"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:textColor="@color/c_99"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="12dp"
+                android:layout_toEndOf="@+id/iv_circle_mine"
+                android:layout_toRightOf="@+id/iv_circle_mine"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="5dp"
+                android:maxLines="3"
+                android:paddingTop="4dp"
+                android:textColor="@color/c_33"
+                android:textSize="@dimen/textView_information_tv_size"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/textView_information_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView_username"
+                android:layout_alignTop="@+id/textView_username"
+                android:layout_toEndOf="@+id/textView_username"
+                android:layout_toRightOf="@+id/textView_username"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_xb"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:fadeDuration="3"
+                    fresco:placeholderImageScaleType="focusCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="right"
+                    android:textColor="@color/c_99"
+                    android:textSize="12sp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sd_dz"
+                        android:layout_width="36dp"
+                        android:layout_height="28dp"
+                        android:layout_alignBottom="@+id/tv_dz_num"
+                        android:layout_alignTop="@+id/tv_dz_num"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/tv_dz_num"
+                        android:layout_toStartOf="@+id/tv_dz_num"
+                        android:paddingLeft="12dp"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="3"
+                        fresco:placeholderImage="@drawable/good"
+                        fresco:placeholderImageScaleType="focusCrop"
+                        fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn" />
+
+                    <TextView
+                        android:paddingRight="10dp"
+                        android:id="@+id/tv_dz_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxEms="5"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textColor="@color/c_be"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <com.ckjs.ck.Tool.ViewTool.MyGridView
+                android:id="@+id/grd_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView_information"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@+id/iv_circle_mine"
+                android:horizontalSpacing="5dp"
+                android:numColumns="3"
+                android:verticalSpacing="0dp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sd_dw"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_below="@+id/grd_iv"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/iv_circle_mine"
+                android:layout_toRightOf="@+id/iv_circle_mine"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+            <TextView
+                android:id="@+id/tv_dw"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_alignTop="@+id/sd_dw"
+                android:layout_below="@+id/grd_iv"
+                android:layout_toEndOf="@+id/sd_dw"
+                android:layout_toLeftOf="@+id/sdFenxiang"
+                android:layout_toRightOf="@+id/sd_dw"
+                android:layout_toStartOf="@+id/sdFenxiang"
+                android:paddingRight="6dp"
+                android:singleLine="true"
+                android:textColor="@color/c_66"
+                android:textSize="10sp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdFenxiang"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:layout_alignBottom="@+id/sd_dw"
+                android:layout_alignTop="@+id/sd_dw"
+                android:layout_below="@+id/grd_iv"
+                android:layout_toLeftOf="@+id/sdPinlun"
+                android:layout_toStartOf="@+id/sdPinlun"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImage="@drawable/fenxiang"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdPinlun"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:layout_alignBottom="@+id/sd_dw"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/sd_dw"
+                android:layout_below="@+id/grd_iv"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:placeholderImage="@drawable/pinlun"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+            <RelativeLayout
+                android:id="@+id/ll_tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/sdPinlun"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/iv_circle_mine"
+                android:layout_toRightOf="@+id/iv_circle_mine"
+                android:background="@color/c_ffffff"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tv_pl_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/c_f2"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="更多评论..."
+                    android:textColor="@color/c_99"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_pl_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pl_more"
+                    android:background="@color/c_f2"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/c_33"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_pl_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/tv_pl_one"
+                    android:background="@color/c_f2"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/c_33"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/item_gftj" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

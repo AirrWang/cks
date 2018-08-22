@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/my_toolbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/home_head_new_layout" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/c_ffffff"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="超空精选"
+                        android:textColor="@color/color_title"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="86dp"
+                    android:background="@drawable/home_coach_bg"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_activity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="48dp"
+                            android:layout_height="42dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            fresco:actualImageScaleType="fitCenter"
+                            fresco:placeholderImage="@drawable/home_activity"
+                            fresco:placeholderImageScaleType="fitCenter" />
+
+                        <TextView
+                            android:id="@+id/textViewFuJin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center_horizontal"
+                            android:text="健身活动"
+                            android:textColor="@color/c_33"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:placeholderImage="@color/c_ffffff"
+                        fresco:placeholderImageScaleType="fitCenter" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_sj"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            fresco:actualImageScaleType="fitCenter"
+                            fresco:placeholderImage="@drawable/home_personal_trainer"
+                            fresco:placeholderImageScaleType="fitCenter" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_horizontal"
+                            android:text="超空私教"
+                            android:textColor="@color/c_33"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:placeholderImage="@color/c_ffffff"
+                        fresco:placeholderImageScaleType="fitCenter" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_read"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            fresco:actualImageScaleType="fitCenter"
+                            fresco:placeholderImage="@drawable/home_read"
+                            fresco:placeholderImageScaleType="fitCenter" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_horizontal"
+                            android:text="健康讲堂"
+                            android:textColor="@color/c_33"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="4dp"-->
+                <!--android:background="@color/c_ffffff"-->
+                <!--android:visibility="invisible" />-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/ll_fu_jin"-->
+                <!--android:background="@color/c_ffffff">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@color/c_ffffff"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="推荐阅读"-->
+                <!--android:textColor="@color/c_33"-->
+                <!--android:textSize="14sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/textViewTj"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/c_ffffff"-->
+                <!--android:drawablePadding="4dp"-->
+                <!--android:drawableRight="@drawable/home_more_arrows"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="更多"-->
+                <!--android:textColor="@color/c_e7"-->
+                <!--android:textSize="12sp"-->
+                <!--android:visibility="invisible" />-->
+                <!--</LinearLayout>-->
+
+                <!--<HorizontalScrollView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="@color/c_ffffff"-->
+                <!--android:scrollbars="none">-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/c_ffffff"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/llbgTj"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/c_ffffff"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/tv_hTj"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:orientation="horizontal" />-->
+                <!--</LinearLayout>-->
+
+                <!--</HorizontalScrollView>-->
+                <!--</LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/tv_below"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:background="#00000000" />
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

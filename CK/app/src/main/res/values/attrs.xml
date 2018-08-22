@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="play">
+        <attr name="play_line_color" format="color"/>
+        <attr name="play_bg_line_color" format="color"/>
+        <attr name="play_line_width" format="integer"/>
+        <attr name="play_bg_line_width" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="download">
+        <attr name="download_line_color" format="color"/>
+        <attr name="download_bg_line_color" format="color"/>
+        <attr name="download_text_color" format="color"/>
+        <attr name="download_line_width" format="integer"/>
+        <attr name="download_bg_line_width" format="integer"/>
+        <attr name="download_text_size" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="SnakeView">
+        <attr name="strokeColor" format="color"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="minValue" format="float"/>
+        <attr name="maxValue" format="float"/>
+        <attr name="maximumNumberOfValues" format="integer"/>
+        <attr name="animationDuration" format="integer"/>
+    </declare-styleable>
+    <!--扇形图-->
+    <declare-styleable name="PieChartView">
+        <attr name="gravity_piecharview">
+            <enum name="top" value="0"></enum>
+            <enum name="centre" value="1"></enum>
+            <enum name="fixXY" value="2"></enum>
+        </attr>
+        <!--扇形的中心空白直径 单位:db-->
+        <attr name="centreRadius" format="dimension"></attr>
+        <!--字体大小-->
+        <attr name="lableTextSize" format="dimension"></attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2">
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutTj"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_CkCircleLook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/c_f2"
+            android:dividerHeight="9dp"
+            android:scrollbars="none"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <TextView
+        android:id="@+id/tv_zw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="暂无关注"
+        android:textColor="@color/c_66"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_to_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="72dp"
+        android:background="@drawable/bg_item_jh"
+        android:text="登录"
+        android:textColor="@color/c_ffffff"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,208 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:fresco="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.ckjs.ck.Android.HealthModule.Fragment.HealthSleepWeekFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:gravity="center">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="TextView"
+                    android:visibility="gone"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/sleep_monitor_arrow_left"
+                    fresco:placeholderImageScaleType="fitCenter"/>
+
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/textView52"
+                    android:layout_toRightOf="@+id/textView52"
+                    android:textColor="@color/c_33"
+                    android:textSize="12sp"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="TextView"
+                    android:visibility="gone"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/sleep_monitor_arrow_right"
+                    fresco:placeholderImageScaleType="fitCenter"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:background="@color/c_ffffff">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/textView52"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="TextView"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/deep_sleep"
+                    fresco:placeholderImageScaleType="focusCrop"/>
+
+                <TextView
+                    android:id="@+id/textView53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/textView52"
+                    android:layout_toRightOf="@+id/textView52"
+                    android:text="深睡"
+                    android:textColor="@color/c_33"
+                    android:textSize="12sp"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/textView57"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@+id/textView53"
+                    android:layout_toRightOf="@+id/textView53"
+                    android:text="TextView"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/light_sleep"
+                    fresco:placeholderImageScaleType="focusCrop"/>
+
+                <TextView
+                    android:id="@+id/textView60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/textView57"
+                    android:layout_toRightOf="@+id/textView57"
+                    android:text="浅睡"
+                    android:textColor="@color/c_33"
+                    android:textSize="12sp"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/textView62"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@+id/textView60"
+                    android:layout_toRightOf="@+id/textView60"
+                    android:text="TextView"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/sober"
+                    fresco:placeholderImageScaleType="focusCrop"/>
+
+                <TextView
+                    android:id="@+id/textView63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/textView62"
+                    android:layout_toRightOf="@+id/textView62"
+                    android:text="清醒"
+                    android:textColor="@color/c_33"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="156dp"
+                android:layout_height="156dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp">
+
+                <com.ckjs.ck.Tool.ViewTool.SectorView.PieChartView
+                    android:id="@+id/myViewShape"
+                    android:layout_width="156dp"
+                    android:layout_height="156dp"
+                    app:centreRadius="0dp"
+                    app:gravity_piecharview="top"
+                    app:lableTextSize="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvShape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/c_99"
+                    android:textSize="17sp"/>
+            </RelativeLayout>
+            <!--<LinearLayout-->
+            <!--android:background="@color/c_ffffff"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="28dp">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="2"-->
+            <!--android:gravity="center_horizontal|right"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:text="上月"-->
+            <!--android:textColor="@color/c_33"-->
+            <!--android:textSize="12sp" />-->
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:textColor="@color/c_33"-->
+            <!--android:textSize="12sp" />-->
+            <!--<TextView-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:gravity="center_horizontal|left"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_weight="2"-->
+            <!--android:text="本月"-->
+            <!--android:textColor="@color/c_33"-->
+            <!--android:textSize="12sp" />-->
+            <!--</LinearLayout>-->
+            <include layout="@layout/activity_health_sleep_bottom"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/c_f2"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

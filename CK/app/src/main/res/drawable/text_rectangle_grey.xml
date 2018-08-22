@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><!--<shape xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:shape="rectangle"--><!--android:useLevel="false">--><!--//实心颜色--><!--<solid android:color="@color/c_00" />--><!--//边框颜色--><!--<stroke--><!--android:width="1dp"--><!--android:color="@color/c_66" />--><!--//圆宽高--><!--&lt;!&ndash;<size&ndash;&gt;--><!--&lt;!&ndash;android:width="50dp"&ndash;&gt;--><!--&lt;!&ndash;android:height="50dp"></size>&ndash;&gt;-->
+
+<!--</shape>-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This is the main color -->
+    <item>
+        <shape>
+            <!--    边框颜色 -->
+            <solid android:color="@color/c_be" />
+        </shape>
+    </item>
+    <!-- 给View的上 下设置1dp的边框 -->
+    <item
+        android:bottom="1dp"
+        android:top="1dp">
+        <shape>
+            <!--     View填充颜色 -->
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+</layer-list>

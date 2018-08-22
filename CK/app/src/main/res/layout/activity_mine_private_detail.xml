@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/c_f2">
+
+    <include layout="@layout/toolbar" />
+
+    <ListView
+        android:id="@+id/list_mine_private_letter_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/c_f2"
+        android:divider="@color/c_f2"
+        android:dividerHeight="0dp"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_ffffff"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/mine_private_input_content"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@color/c_f2"
+            android:paddingLeft="10dp"
+            android:textColor="@color/c_33"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/mine_private_input_sd"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/fea21249"
+            android:text="发送"
+            android:textColor="@color/c_ffffff" />
+
+    </LinearLayout>
+
+</LinearLayout>

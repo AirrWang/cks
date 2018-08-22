@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_item_button_bai_10"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_circle_mine"
+        android:layout_width="@dimen/iv_circle_mine_wh"
+        android:layout_height="@dimen/iv_circle_mine_wh"
+        android:layout_marginLeft="@dimen/iv_circle_mine_margin"
+        android:layout_marginRight="@dimen/iv_circle_mine_margin"
+        android:layout_marginTop="@dimen/iv_circle_mine_margin"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="3"
+        fresco:placeholderImage="@color/c_e6"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/textView_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_circle_mine"
+        android:layout_marginRight="12dp"
+        android:layout_toEndOf="@+id/iv_circle_mine"
+        android:layout_toRightOf="@+id/iv_circle_mine"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textSize="@dimen/textView_username_tv_size" />
+
+    <TextView
+        android:id="@+id/textView_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_username"
+        android:layout_marginRight="12dp"
+        android:layout_toEndOf="@+id/iv_circle_mine"
+        android:layout_toRightOf="@+id/iv_circle_mine"
+        android:text="TextView"
+        android:textSize="@dimen/textView_information_tv_size" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdFenxiang"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_below="@+id/grd_iv"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/sdPinlun"
+        android:layout_toStartOf="@+id/sdPinlun"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="3"
+        fresco:placeholderImage="@drawable/fenxiang"
+        fresco:placeholderImageScaleType="focusCrop" />
+
+    <com.ckjs.ck.Tool.ViewTool.MyGridView
+        android:id="@+id/grd_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_information"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/iv_circle_mine"
+        android:horizontalSpacing="@dimen/iv_circle_mine_margin"
+        android:numColumns="3"
+        android:paddingBottom="@dimen/grd_iv_circlleMine_hv"
+        android:verticalSpacing="@dimen/iv_circle_mine_margin" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdPinlun"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/grd_iv"
+        android:layout_marginRight="16dp"
+        fresco:placeholderImage="@drawable/pinlun"
+        fresco:placeholderImageScaleType="focusCrop" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/sdPinlun" />
+
+</RelativeLayout>

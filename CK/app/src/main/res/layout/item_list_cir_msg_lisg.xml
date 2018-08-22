@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/textView43"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="3"
+        fresco:placeholderImage="@color/c_f2"
+        fresco:placeholderImageScaleType="focusCrop" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/textView43"
+        android:layout_toRightOf="@+id/textView43"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/c_33"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView44"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/textView43"
+        android:layout_toLeftOf="@+id/textViewMsg"
+        android:layout_toRightOf="@+id/textView43"
+        android:layout_toStartOf="@+id/textViewMsg"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/c_66"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView45"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/textView43"
+        android:layout_toLeftOf="@+id/textViewMsg"
+        android:layout_toRightOf="@+id/textView43"
+        android:layout_toStartOf="@+id/textViewMsg"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/c_99"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/textViewMsg"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:background="@color/c_f2">
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:background="@color/c_f2"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/c_66"
+            android:textSize="12sp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_msg"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImageScaleType="focusCrop" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView44"
+        android:layout_marginLeft="10sp"
+        android:layout_toEndOf="@+id/textView44"
+        android:layout_toLeftOf="@+id/textViewMsg"
+        android:layout_toRightOf="@+id/textView44"
+        android:layout_toStartOf="@+id/textViewMsg"
+        android:text="TextView">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_xb"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:fadeDuration="3"
+            fresco:placeholderImageScaleType="fitCenter" />
+    </RelativeLayout>
+</RelativeLayout>

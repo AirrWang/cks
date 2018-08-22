@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_item_button_bai_10"
+    android:orientation="horizontal"
+    android:paddingTop="5dp">
+
+
+    <TextView
+        android:id="@+id/textViewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/tv_bd_ridio"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="1"
+        android:textColor="@color/c_ffffff"
+        android:textSize="10sp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_circle_recommend"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="clip_vertical"
+        android:layout_marginRight="22dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="3"
+        fresco:placeholderImage="@color/c_e6" />
+
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="张三"
+        android:textColor="@color/c_33"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="28dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical|right"
+            android:text="消耗"
+            android:textColor="@color/c_33"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textViewConsumptionNum"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text=" ？"
+            android:textColor="@color/fea21249"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical|left"
+            android:text="kcal"
+            android:textColor="@color/c_33"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

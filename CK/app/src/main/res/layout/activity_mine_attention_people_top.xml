@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mine_attention_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mine_attention_pic_detail"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="12dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="1"
+                fresco:placeholderImage="@color/c_e6"
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:pressedStateOverlayImage="@drawable/text_rdio_bg"
+                fresco:roundedCornerRadius="4dp" />
+
+            <LinearLayout
+                android:layout_width="54dp"
+                android:layout_height="88dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_bz"
+                    android:layout_width="54dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/c_4491F2"
+                    android:gravity="center"
+                    android:text="修改备注"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mine_attention_name_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mine_attention_sex"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="4dp"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mine_attention_level"
+                android:layout_width="18dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="4dp"
+                fresco:actualImageScaleType="fitCenter"
+                fresco:placeholderImageScaleType="fitCenter" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/mine_attention_signname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/historyscore_tb"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mine_attention_gym_icon"
+                android:layout_width="18dp"
+                android:layout_height="19dp"
+                android:gravity="center_vertical"
+                android:padding="3dp"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+            <TextView
+                android:id="@+id/mine_attention_gym"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:textColor="#666666"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+
+                android:id="@+id/mine_attention_focushide"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="25dp"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:actualImageScaleType="fitCenter"
+                />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mine_attention_info"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="25dp"
+                fresco:actualImageScaleType="fitCenter"
+                fresco:placeholderImageScaleType="fitCenter"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/c_f2" />
+
+    <LinearLayout
+        android:id="@+id/ll_nouse"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/c_ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="动态"
+            android:textColor="@color/c_33"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:background="@color/c_f2"/>-->
+</LinearLayout>

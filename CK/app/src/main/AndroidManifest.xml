@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.ckjs.ck">
+
+    <!--
+    /**
+     * Created by NiPing and Airr Wang
+     * Copyright  www.chaokongs.com. All rights reserved.
+     *
+     /
+    -->
+    <uses-feature android:name="android.hardware.sensor.accelerometer"/>
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+
+    <!-- 获取设备信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <!-- 网络通信 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- 获取MAC地址 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- 从sdcard中读取数据的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 创建文件夹的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <!-- 相机照相的权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <!-- 允许访问振动设备 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 屏幕保持唤醒 不锁屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 允许应用程序更改主屏幕中的设置和快捷方式 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- 用于优化GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!-- Required -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <!-- 计步器权限 -->
+
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true"/>
+
+    <!-- app只为具有BLE的设备提供 -->
+    <!-- <uses-feature -->
+    <!-- android:name="android.hardware.bluetooth_le" -->
+    <!-- android:required="true" /> -->
+    <application
+        android:name=".Application.CkApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="超空"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="icon, label">
+
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1195170113115905#chaokongs"/>
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"/>
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d41dd4574d77582ad3893f62f1b4728a"/>
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <!-- 声明定位service -->
+        <service android:name="com.amap.api.location.APSService"/>
+
+        <receiver
+            android:name=".Receiver.MyJPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+
+                <category android:name="com.ckjs.ck"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".Service.StepService"
+            android:priority="1000">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_TIME_TICK"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".Receiver.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Android.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!-- 需要添加下面的intent-filter配置用来进行网址唤醒App -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="CKHSS"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- alipay 微信callback -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1105859020"/>
+            </intent-filter>
+        </activity>
+        <!-- alipay QQ callback -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- 友盟key -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="583fe205ae1bf8384a000b36"/>
+
+        <activity
+            android:name=".Android.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".Android.LoginActivity"
+            android:label="@string/login_activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.ForgetPwdActivity"
+            android:label="@string/forget_pwd_activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.UserInfoActivity"
+            android:label="@string/user_info_activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.RegistCallActivity"
+            android:label="@string/regist_activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.GuideActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineUserInfoEditeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineAboutCKSActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineSetActivity"
+            android:label="@string/title_activity_mine_set"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.PunchCardDialog"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.BaoMingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineJoinActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineWipeCacheActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CkCircleModule.Activity.CircleDongTaiActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".Android.CkCircleModule.Activity.CircleRecommenMoreActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineTargetActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CkCircleModule.Activity.CircleIcBigActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineAttentionPeople"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeTjActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeAcActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.AcH5Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineH5Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.TjH5MineActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.TjH5HomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthMoreActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensor"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineEditHeightActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineFeedBackActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineFavoriteActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineUpDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeShopH5Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.ShopIsOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.UpdAdressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Tool.Player.GiraffePlayerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.FloatActivity"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeJsfMoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.PoiSearchOneJsfActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.PoiSearchListJsfActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthPlayListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Tool.WechatVideoRecorder.VideoRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.ThirdUserInfoActivity"
+            android:label="@string/title_thirdUserInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MIneFrgGzActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineGymInfoActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.RealNameActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.RealNameYsActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity"/>
+        <activity
+            android:name=".Android.MineModule.Activity.YuYueActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.YuYuedActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineDataH5Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.TouXiangActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeCityJsfListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MinePrivateLetterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CkCircleModule.Activity.PoiSearchOneCirActivity"
+            android:label="@string/cir_dw"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeJsfSjListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeJsfCkthListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeStoreCardPayActivity"
+            android:label="超空特惠卡购买页面"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MinePrivateLetterInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeStoreCoachPayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CkCircleModule.Activity.CirMsgListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthSleepMonitorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthHeartMonitorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthShakePhoneActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.ShockActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthBloodPressMonitorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthHeartWeekActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthPressWeekActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.CkSjActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.SiJiaoYuYueActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MainCoachActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineOrderNewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.PeopleSureOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeJsfSjListSjActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CoachModule.Activity.TiXianActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CoachModule.Activity.OrderHisActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CoachModule.Activity.IsOrderPayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CoachModule.Activity.ToZhiDaoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CoachModule.Activity.CoachDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.PingJiaSiJiaoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.MainRunJiuPianActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CoachModule.Activity.DuoJIeKeZhanKaiActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CoachModule.Activity.KcQrActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.SjRzActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 视频通话 -->
+        <activity
+            android:name=".Android.CoachModule.Activity.HanXinShiPinPlay.VideoCallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 语音通话 -->
+        <activity
+            android:name=".Android.CoachModule.Activity.HanXinShiPinPlay.VoiceCallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineIntegralActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.RunRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.RunRecordDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.RunJiLuActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthBloodOxygenMonitorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthBloodOxygenWeekActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthBloodOxygenEmergencyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthBloodPressEmergencyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthHeartEmergencyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthBloodOxygenEmergencyAdviceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthBloodPressEmergencyAdviceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HealthModule.Activity.HealthHeartEmergencyAdviceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Tool.Location.route.Activity.RoutePlanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Tool.Location.route.Activity.BusRouteDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Tool.Location.route.Activity.DriveRouteDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Tool.Location.route.Activity.RideRouteDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Tool.Location.route.Activity.WalkRouteDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.BindActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.DeviceControlActivity"
+            android:screenOrientation="portrait"/>
+
+        <receiver android:name=".Receiver.MonitorBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.SmsBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Android.MineModule.Activity.MineAimCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineAimShowActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineSerchJSFActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineBindJSFActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.BindHSHActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.BindNFCActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivityNFC"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.BindNFCVipActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivityNFC"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.BindNFCMjActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivityNFC"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.BindNFCQdActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivityNFC"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineInvitedFriendsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HSHH5Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineInformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineMessageInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.MineBindJSFSureActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.BackDepositActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.DepositActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.BackStateActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.DespositSelectActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CkCircleModule.Activity.CirPaiHangMoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CkCircleModule.Activity.CirPaiHangTodayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.BusinessActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.CoachModule.Activity.OrderPlaceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.ReturnCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.OrderDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.PersonalFilesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.NotUse.HomeHSFActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.SearchFriendsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.ChooseRelationship"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.HSFTrueActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.HomeModule.Activity.HomeHSFNewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Android.MineModule.Activity.ShareHSHActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

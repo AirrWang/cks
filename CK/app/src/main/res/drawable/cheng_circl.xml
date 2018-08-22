@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+    <solid android:color="@color/fea21249" />
+    <!--<size-->
+        <!--android:width="@dimen/text_rdio__wh"-->
+        <!--android:height="@dimen/text_rdio__wh" />-->
+    <corners android:radius="50dp"/>
+</shape>

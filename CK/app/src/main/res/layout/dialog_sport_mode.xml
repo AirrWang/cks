@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/ll_sport_mode1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="60dp"
+            android:layout_height="84dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/daily_model" />
+
+        <TextView
+            android:id="@+id/tv_mode_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="日常模式"
+            android:textColor="@color/c_33" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/c_f2"/>
+    <LinearLayout
+        android:id="@+id/ll_sport_mode2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="60dp"
+            android:layout_height="84dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/run_model" />
+        <TextView
+            android:id="@+id/tv_mode_2"
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运动模式"
+            android:textColor="@color/c_33"/>
+    </LinearLayout>
+
+</LinearLayout>

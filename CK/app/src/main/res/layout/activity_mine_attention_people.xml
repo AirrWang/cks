@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_mine_attention_people"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/c_f2"
+            android:divider="@color/c_f2"
+            android:dividerHeight="1dp"
+            android:scrollbars="none"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_zhanwei"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_nouse"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="96dp"
+        android:text="该用户暂无动态"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

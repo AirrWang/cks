@@ -1,0 +1,186 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_tab_margin">2dp</dimen>
+    <dimen name="drawable_banner_dot_radius">4dp</dimen>
+    <dimen name="drawable_home_item_button_radius_5">5dp</dimen>
+    <dimen name="drawable_home_item_button_padding">1dp</dimen>
+    <dimen name="drawable_home_item_button_radius">5dp</dimen>
+    <dimen name="drawable_home_item_button_radius_12">12dp</dimen>
+    <dimen name="drawable_home_item_button_radius_17">17dp</dimen>
+    <dimen name="login_margin_top">32dp</dimen>
+    <dimen name="iv_circle_mine_margin">12dp</dimen>
+    <dimen name="iv_circle_mine_wh">32dp</dimen>
+    <dimen name="grd_iv_circlleMine_hv">12dp</dimen>
+    <dimen name="grd_iv_circlleMine_margin_top">8dp</dimen>
+    <dimen name="textView_username_tv_size">15sp</dimen>
+    <dimen name="textView_information_tv_size">12sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="textView_set_margrn">12dp</dimen>
+    <dimen name="toolbar_right_btn_margin">4dp</dimen>
+    <dimen name="list_CkCircleMine_dividerHeight">10dp</dimen>
+    <dimen name="text_rdio__wh">64dp</dimen>
+    <dimen name="text_rdio_recommmend_wh">16dp</dimen>
+    <dimen name="drawable_home_item_button_radius_2">5dp</dimen>
+    <dimen name="mine_pic_three">18dp</dimen>
+
+    <dimen name="historyscore_tb">6dp</dimen>
+    <dimen name="text_rdio_wh_5">5dp</dimen>
+    <dimen name="toolbar_btn_wh">20dp</dimen>
+    <dimen name="toolbar_btn_rifht">14dp</dimen>
+
+    //首页四个图标的宽高
+    <dimen name="mine_four">24dp</dimen>
+    <dimen name="mine_four_26">26dp</dimen>
+    <dimen name="mine_four_21">21dp</dimen>
+    <dimen name="drawable_home_item_button_radius_10">10dp</dimen>
+    <dimen name="two">2dp</dimen>
+    <dimen name="main12">12dp</dimen>
+    <dimen name="post_media_height">220dp</dimen>
+
+
+    <dimen name="video_progress_dialog_margin_top">80dp</dimen>
+    <dimen name="video_volume_dialog_margin_left">24dp</dimen>
+
+    <dimen name="main_title_size">18sp</dimen>
+    <dimen name="second_title_size">16sp</dimen>
+    <dimen name="desc_title_size">12sp</dimen>
+    <dimen name="d12">12sp</dimen>
+    <dimen name="d14">14sp</dimen>
+    <dimen name="d10">10sp</dimen>
+
+    <dimen name="d22">22dp</dimen>
+    <dimen name="jtou_yi_ban_w">10dp</dimen>
+    <dimen name="city_jsf_xing">14dp</dimen>
+    <dimen name="city_jsf_xing_m">3dp</dimen>
+    <dimen name="text_rdio__wh_sx">64dp</dimen>
+    <dimen name="drawable_home_item_button_radius_30">30dp</dimen>
+
+    <!--//健康监测适配-->
+    <dimen name="health_shui_mian_icon_wh">32dp</dimen>
+    <dimen name="health_zhen_dong_icon_wh">26dp</dimen>
+    <dimen name="health_shui_mian_icon_top">4dp</dimen>
+    <dimen name="health_shui_mian_icon_bottom">8dp</dimen>
+    <dimen name="health_run_top">12dp</dimen>
+    <dimen name="health_shui_mian_icon_bottom_end">10dp</dimen>
+    <dimen name="health_6">6dp</dimen>
+
+    <dimen name="health_sleep_shen_shui">120dp</dimen>//深睡
+    <dimen name="health_sleep_qian_shui">142dp</dimen>//浅睡
+    <dimen name="health_sleep_qing_xing">153dp</dimen>//清醒
+    <dimen name="health_sleep_mh">10dp</dimen>
+    <dimen name="gui_ji_top_all_shu_ju_34">34dp</dimen>
+    <dimen name="gui_ji_top_all_shu_ju_30">30dp</dimen>
+
+    <dimen name="title_text_size">15sp</dimen>
+    <dimen name="city_name_size">20sp</dimen>
+    <dimen name="city_size_size">12sp</dimen>
+    <dimen name="city_progress_size">11sp</dimen>
+    <dimen name="normal_margin">5dp</dimen>
+    <dimen name="font_58">29dp</dimen>
+    <dimen name="font_170">85dp</dimen>
+    <dimen name="font_26">13sp</dimen>
+    <dimen name="offline_down_title_hight">25dp</dimen>
+    <dimen name="font_24">12sp</dimen>
+    <dimen name="font_30">15sp</dimen>
+    <dimen name="font_32">16sp</dimen>
+    <dimen name="font_28">14sp</dimen>
+    <dimen name="font_22">11sp</dimen>
+    <dimen name="poi_title_size">14sp</dimen>
+    <dimen name="poi_field_size">14sp</dimen>
+    <dimen name="margin_left">15dp</dimen>
+    <dimen name="margin_right">15dp</dimen>
+    <dimen name="offset_title">5dp</dimen>
+    <dimen name="width_title_leftImg">30dp</dimen>
+    <dimen name="offset_title_left">5dp</dimen>
+    <dimen name="margin_padding">15dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="trace_spinner_padding">2dp</dimen>
+
+
+    <dimen name="tv_line_heart">325dp</dimen>
+
+    <dimen name="tv_sleep_null">17dp</dimen>
+    <dimen name="d4">4dp</dimen>
+    <dimen name="d6">6dp</dimen>
+    <dimen name="d10dp">10dp</dimen>
+    <dimen name="d8">8dp</dimen>
+    <dimen name="d7">7dp</dimen>
+
+    <dimen name="dshipinOne">18sp</dimen>
+        <dimen name="dshipin">18sp</dimen>
+    <dimen name="dshipinTop">4dp</dimen>
+
+    <!--定义文字大小-->
+    <dimen name="vm_size_headline">24sp</dimen>
+    <dimen name="vm_size_title">20sp</dimen>
+    <dimen name="vm_size_subhead">16sp</dimen>
+    <dimen name="vm_size_body">14sp</dimen>
+    <dimen name="vm_size_menu">16sp</dimen>
+
+    <dimen name="vm_size_btn_large">20sp</dimen>
+    <dimen name="vm_size_btn_normal">16sp</dimen>
+    <dimen name="vm_size_btn_small">12sp</dimen>
+    <dimen name="vm_size_caption">12sp</dimen>
+
+    <dimen name="vm_size_10">10sp</dimen>
+    <dimen name="vm_size_12">12sp</dimen>
+    <dimen name="vm_size_14">14sp</dimen>
+    <dimen name="vm_size_16">16sp</dimen>
+
+
+    <!--定义头像尺寸-->
+    <dimen name="vm_avatar_very_small">20dp</dimen>
+    <dimen name="vm_avatar_small">36dp</dimen>
+    <dimen name="vm_avatar_normal">56dp</dimen>
+    <dimen name="vm_avatar_large">72dp</dimen>
+
+
+    <!--圆形背景半径定义-->
+    <dimen name="vm_round_radius_small">36dp</dimen>
+    <dimen name="vm_round_radius_normal">56dp</dimen>
+    <dimen name="vm_round_radius_large">72dp</dimen>
+
+    <!--控件 Z 轴高度-->
+    <dimen name="vm_elevation_dwarf">8dp</dimen>
+    <dimen name="vm_elevation_normal">16dp</dimen>
+    <dimen name="vm_elevation_high">32dp</dimen>
+
+    <!--margin-->
+    <dimen name="vm_margin_small">4dp</dimen>
+    <dimen name="vm_margin_normal">8dp</dimen>
+    <dimen name="vm_margin_large">16dp</dimen>
+
+    <!--padding-->
+    <dimen name="vm_padding_small">4dp</dimen>
+    <dimen name="vm_padding_normal">8dp</dimen>
+    <dimen name="vm_padding_large">16dp</dimen>
+
+    <!--定义 Button 常用尺寸-->
+    <dimen name="vm_btn_height_small">36dp</dimen>
+    <dimen name="vm_btn_height_normal">48dp</dimen>
+    <dimen name="vm_btn_height_large">56dp</dimen>
+
+    <!--定义一些通用尺寸-->
+    <dimen name="vm_dimen_0">0dp</dimen>
+    <dimen name="vm_dimen_1">1dp</dimen>
+    <dimen name="vm_dimen_2">2dp</dimen>
+    <dimen name="vm_dimen_4">4dp</dimen>
+    <dimen name="vm_dimen_8">8dp</dimen>
+    <dimen name="vm_dimen_12">12dp</dimen>
+    <dimen name="vm_dimen_16">16dp</dimen>
+    <dimen name="vm_dimen_20">20dp</dimen>
+    <dimen name="vm_dimen_24">24dp</dimen>
+    <dimen name="vm_dimen_32">32dp</dimen>
+    <dimen name="vm_dimen_36">36dp</dimen>
+    <dimen name="vm_dimen_40">40dp</dimen>
+    <dimen name="vm_dimen_48">48dp</dimen>
+    <dimen name="vm_dimen_56">56dp</dimen>
+    <dimen name="vm_dimen_64">64dp</dimen>
+    <dimen name="vm_dimen_72">72dp</dimen>
+    <dimen name="vm_dimen_96">96dp</dimen>
+    <dimen name="vm_dimen_128">128dp</dimen>
+    <dimen name="vm_dimen_192">192dp</dimen>
+    <dimen name="vm_dimen_256">256dp</dimen>
+</resources>

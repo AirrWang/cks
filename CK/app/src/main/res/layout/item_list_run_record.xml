@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/c_ffffff"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/tv_run_record_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/c_33"/>
+    <TextView
+        android:id="@+id/tv_run_record_num"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/c_4491F2"/>
+
+</LinearLayout>

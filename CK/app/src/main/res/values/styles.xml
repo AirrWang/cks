@@ -1,0 +1,99 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="MyToobar">
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="Dialog" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/darker_gray</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MyToobar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--导航栏底色-->
+        <item name="colorPrimary">@color/c_22</item>
+        <!--&lt;!&ndash;状态栏底色&ndash;&gt;-->
+        <item name="colorPrimaryDark">@color/c_000000</item>
+        <!--&lt;!&ndash;导航栏上的标题颜色&ndash;&gt;-->
+        <!--<item name="android:textColorPrimary">@color/c_ffffff</item>-->
+        <!--&lt;!&ndash;Activity窗口的颜色&ndash;&gt;-->
+        <!--<item name="android:windowBackground">@color/c_f6</item>-->
+        <!--&lt;!&ndash;按钮选中或者点击获得焦点后的颜色&ndash;&gt;-->
+        <!--<item name="colorAccent">@color/c_f6</item>-->
+        <!--和 colorAccent相反，正常状态下按钮的颜色-->
+        <!--Toolbar返回按钮颜色更改在这-->
+        <!--<item name="colorControlNormal">@color/c_f6</item>-->
+        <!--Button按钮正常状态颜色-->
+        <!--<item name="colorButtonNormal">@color/c_f6</item>-->
+        <!--EditText 输入框中字体的颜色-->
+        <!--<item name="editTextColor">@color/c_f6</item>-->
+        <item name="alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert.Self</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.Dialog.Alert.Self" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <!--修改AlertDialog按钮的颜色-->
+        <item name="colorAccent">@color/c_33</item>
+    </style>
+
+    <style name="Toobar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--导航栏底色-->
+        <item name="colorPrimary">@color/c_22</item>
+        <!--&lt;!&ndash;&lt;!&ndash;状态栏底色&ndash;&gt;&ndash;&gt;-->
+        <item name="colorPrimaryDark">@color/c_000000</item>
+        <!--&lt;!&ndash;导航栏上的标题颜色&ndash;&gt;-->
+        <!--<item name="android:textColorPrimary">@color/c_ffffff</item>-->
+        <!--&lt;!&ndash;Activity窗口的颜色&ndash;&gt;-->
+        <!--<item name="android:windowBackground">@color/c_f6</item>-->
+        <!--&lt;!&ndash;按钮选中或者点击获得焦点后的颜色&ndash;&gt;-->
+        <!--<item name="colorAccent">@color/c_f6</item>-->
+        <!--和 colorAccent相反，正常状态下按钮的颜色-->
+
+        <!--Toolbar返回按钮颜色更改在这-->
+        <item name="colorControlNormal">@color/c_babcbc</item>
+
+        <!--Button按钮正常状态颜色-->
+        <!--<item name="colorButtonNormal">@color/c_f6</item>-->
+        <!--EditText 输入框中字体的颜色-->
+        <!--<item name="editTextColor">@color/c_f6</item>-->
+    </style>
+
+    <style name="NavPage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <!-- <item name="android:background">@drawable/nav_page</item> -->
+        <item name="android:background">@color/c_f2</item>
+    </style>
+
+    <style name="Theme.FloatActivity" parent="android:style/Theme.Dialog">
+        <!-- float_box为我们定义的窗口背景 ，这个不是必须的-->
+        <item name="android:windowBackground">@drawable/float_box</item>
+    </style>
+
+    <style name="Theme.FloatActivityNFC" parent="android:style/Theme.Dialog">
+        <!-- float_box为我们定义的窗口背景 ，这个不是必须的-->
+        <item name="android:windowBackground">@drawable/float_box_nfc</item>
+    </style>
+
+    <color name="c_504491F2">#03221a</color>手机标题栏颜色
+
+    <style name="MyProgressBarStyleLarge">
+        　　
+        <item name="android:indeterminateDrawable">@drawable/shouhuan_serch</item>
+        　　
+        <item name="android:minWidth">76dip</item>
+        　　
+        <item name="android:maxWidth">76dip</item>
+        　　
+        <item name="android:minHeight">76dip</item>
+        　　
+        <item name="android:maxHeight">76dip</item>
+    </style>
+</resources>

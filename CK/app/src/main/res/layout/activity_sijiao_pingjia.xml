@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/c_ffffff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/c_ffffff">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/pingjia_jiaolian_tuxiang"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    fresco:placeholderImage="@color/c_f2" />
+
+                <LinearLayout
+                    android:id="@+id/ll_pingjia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="29dp"
+                    android:layout_toRightOf="@+id/pingjia_jiaolian_tuxiang">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="教练:"
+                        android:textColor="@color/c_33"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/pingjia_jiaolian_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="李三"
+                        android:textColor="@color/fea21249"
+                        android:textSize="15sp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sd_sex"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="10dp"
+                        fresco:placeholderImage="@color/c_f2" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_pingjia"
+                    android:layout_marginTop="36dp"
+                    android:gravity="center"
+                    android:text="￥100"
+                    android:textColor="@color/c_33"
+                    android:textSize="25dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff"
+                android:orientation="horizontal"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:paddingTop="35dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/evaluate_color"
+                    fresco:placeholderImageScaleType="fitCenter" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_2"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/evaluate_color"
+                    fresco:placeholderImageScaleType="fitCenter" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_3"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/evaluate_color"
+                    fresco:placeholderImageScaleType="fitCenter" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_4"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/evaluate_color"
+                    fresco:placeholderImageScaleType="fitCenter" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_5"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/evaluate_color"
+                    fresco:placeholderImageScaleType="fitCenter" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_pj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff"
+                android:gravity="center_horizontal"
+                android:paddingTop="24dp"
+                android:text="非常满意，无可挑剔"
+                android:textColor="@color/fea21249"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_yq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff"
+                android:gravity="center_horizontal"
+                android:paddingBottom="30dp"
+                android:paddingTop="20dp"
+                android:text="指出优点"
+                android:textColor="@color/c_33"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff">
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_retangle_biankuang"
+                    android:gravity="center"
+                    android:text="服务态度好"
+                    android:textColor="@color/c_99"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_2"
+
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_retangle_biankuang"
+                    android:gravity="center"
+                    android:text="专业强"
+                    android:textColor="@color/c_99"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff"
+                android:paddingTop="30dp">
+
+                <TextView
+                    android:id="@+id/tv_3"
+
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_retangle_biankuang"
+                    android:gravity="center"
+                    android:text="效果棒"
+                    android:textColor="@color/c_99"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_4"
+
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_retangle_biankuang"
+                    android:gravity="center"
+                    android:text="经验丰富"
+                    android:textColor="@color/c_99"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/e_msg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/c_f2"
+                android:gravity="top"
+                android:hint="其他想说的"
+                android:padding="8dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/c_f2" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_tj"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/c_4491F2"
+        android:text="提交评价"
+        android:textColor="@color/c_ffffff"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2">
+
+    <include layout="@layout/toolbar"/>
+
+    <ListView
+        android:id="@+id/lv_run_record"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/c_f2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:divider="@color/c_f2">
+
+    </ListView>
+    <TextView
+        android:id="@+id/tv_run_record"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/c_66"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无跑步记录"/>
+
+
+
+</RelativeLayout>

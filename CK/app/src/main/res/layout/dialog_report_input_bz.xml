@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="请设置您对他的备注"
+
+        android:textColor="@color/c_4491F2"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxLength="10"
+        android:gravity="center"
+        android:hint="原名字"
+        android:textSize="14sp"
+        android:paddingBottom="14dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/c_33"
+        android:textColorHint="@color/c_99" />
+
+    <LinearLayout
+        android:layout_marginTop="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="32.5dp"
+            android:background="@color/fea21249"
+            android:text="确定"
+            android:textColor="@color/c_ffffff"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32.5dp"
+            android:text="取消"
+            android:background="@color/c_99"
+            android:textColor="@color/c_ffffff"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

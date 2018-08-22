@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/user_pic"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="38dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:placeholderImage="@color/c_e6"
+               />
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="45dp"
+                    android:layout_height="38dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    android:layout_gravity="center_vertical"
+                    fresco:placeholderImage="@drawable/name" />
+
+                <EditText
+                    android:id="@+id/et_petname"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/text_rectangle_circl_5"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="昵称"
+                    android:maxLength="8"
+                    android:singleLine="true"
+                    android:textColor="@color/c_33"
+                    android:textColorHint="@color/c_99"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="45dp"
+                    android:layout_height="38dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    android:layout_gravity="center_vertical"
+                    fresco:placeholderImage="@drawable/sex" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/info_man"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_rectangle_circl_left_5"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="男"
+                        android:textSize="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/info_woman"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_rectangle_circl_right_5"
+                        android:gravity="center"
+                        android:text="女"
+                        android:textSize="16dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="45dp"
+                    android:layout_height="38dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    android:layout_gravity="center_vertical"
+                    fresco:placeholderImage="@drawable/age" />
+
+                <TextView
+
+                    android:id="@+id/et_age"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/text_rectangle_circl_5"
+                    android:gravity="center"
+                    android:hint="出生日期"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/c_33"
+                    android:textColorHint="@color/c_99"
+                    android:textSize="14dp" />
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="33dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/text_rectangle_circl_right_5"-->
+                    <!--android:gravity="center"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:text="岁"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="16sp" />-->
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/simpleDraweeView3"
+                    android:layout_width="45dp"
+                    android:layout_height="38dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    android:layout_gravity="center_vertical"
+                    fresco:placeholderImage="@drawable/height" />
+
+                <EditText
+                    android:id="@+id/et_height"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/text_rectangle_circl_left_5"
+                    android:gravity="center"
+                    android:hint="身高"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:singleLine="true"
+                    android:textColor="@color/c_33"
+                    android:textColorHint="@color/c_99"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_rectangle_circl_right_5"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="cm"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/simpleDraweeView2"
+                    android:layout_width="45dp"
+                    android:layout_height="38dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    android:layout_gravity="center_vertical"
+                    fresco:placeholderImage="@drawable/weight" />
+
+                <EditText
+                    android:id="@+id/et_weight"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/text_rectangle_circl_left_5"
+                    android:gravity="center"
+                    android:hint="体重"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="@color/c_33"
+                    android:textColorHint="@color/c_99"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/text_rectangle_circl_right_5"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="kg"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/info_next"
+                android:layout_width="149dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/home_item_button_cheng_5"
+                android:text="完成"
+                android:textColor="@color/c_ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

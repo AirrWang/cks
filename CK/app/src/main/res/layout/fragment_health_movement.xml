@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_f2"
+              android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutHealth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/c_ffffff"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_jc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="@dimen/health_shui_mian_icon_bottom"
+                            android:text="运动监测"
+                            android:textColor="@color/color_title"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_run"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/sd_run"
+                            android:layout_centerHorizontal="true"
+                            android:text="今日步数"
+                            android:textColor="@color/c_33"
+                            android:textSize="14sp"/>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/sd_run"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="@dimen/health_run_top"
+                            fresco:actualImageScaleType="fitCenter"
+                            fresco:fadeDuration="1"
+                            fresco:placeholderImage="@drawable/sport_run"
+                            fresco:placeholderImageScaleType="fitCenter"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_health_jibu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="步"
+                        android:textColor="@color/c_4491F2"
+                        android:textSize="31sp"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_time_now"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/c_33"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/health_shui_mian_icon_bottom"
+                        android:background="@color/c_f2"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tv_line"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                fresco:actualImageScaleType="focusCrop"
+                                fresco:fadeDuration="1"
+                                fresco:placeholderImage="@drawable/sport_style"
+                                fresco:placeholderImageScaleType="focusCrop"
+                                fresco:pressedStateOverlayImage="@color/c_50f0eff5"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="4dp"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="运动模式"
+                                android:textColor="@color/c_33"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                fresco:actualImageScaleType="focusCrop"
+                                fresco:fadeDuration="1"
+                                fresco:placeholderImage="@drawable/health_mileage"
+                                fresco:placeholderImageScaleType="focusCrop"
+                                fresco:pressedStateOverlayImage="@color/c_50f0eff5"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="4dp"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="里程"
+                                android:textColor="@color/c_33"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                fresco:actualImageScaleType="focusCrop"
+                                fresco:fadeDuration="1"
+                                fresco:placeholderImage="@drawable/health_kcal"
+                                fresco:placeholderImageScaleType="focusCrop"
+                                fresco:pressedStateOverlayImage="@color/c_50f0eff5"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="4dp"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="卡路里"
+                                android:textColor="@color/c_33"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_health_sportmode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="步行"
+                            android:textColor="@color/fea21249"
+
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_health_distance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="0.0"
+                            android:textColor="@color/fea21249"
+
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_health_expand_new"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="0.0千卡"
+                            android:textColor="@color/fea21249"
+
+                            android:textSize="14sp"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/c_ffffff"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="8dp"
+                        android:text="健康监测"
+
+                        android:textColor="@color/color_title"
+                        android:textSize="14sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+
+                            android:id="@+id/ll_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/c_ffffff"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/health_shui_mian_icon_bottom"
+                            android:paddingTop="8dp">
+
+                            <LinearLayout
+                                android:paddingLeft="8dp"
+                                android:id="@+id/sd_health_heart"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="2"
+                                    android:gravity="center">
+
+                                    <com.facebook.drawee.view.SimpleDraweeView
+                                        android:layout_width="@dimen/health_shui_mian_icon_wh"
+                                        android:layout_height="@dimen/health_shui_mian_icon_wh"
+                                        fresco:actualImageScaleType="focusCrop"
+                                        fresco:placeholderImage="@drawable/health_rate"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_health_heart"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="2dp"
+                                        android:gravity="center_horizontal"
+                                        android:text="心率监测"
+                                        android:textColor="@color/c_33"
+                                        android:textSize="14sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_health_heart"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="2dp"
+                                        android:gravity="center_horizontal"
+                                        android:text=" bpm"
+                                        android:textColor="@color/c_66"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_xl_state"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="待测"
+                                        android:textColor="@color/c_58A360"
+                                        android:textSize="18sp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/c_f2"/>
+
+                            <LinearLayout
+                                android:paddingLeft="8dp"
+                                android:id="@+id/sd_health_bloodoxygen"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="2"
+                                    android:gravity="center">
+
+                                    <com.facebook.drawee.view.SimpleDraweeView
+                                        android:layout_width="@dimen/health_shui_mian_icon_wh"
+                                        android:layout_height="@dimen/health_shui_mian_icon_wh"
+                                        fresco:actualImageScaleType="focusCrop"
+                                        fresco:placeholderImage="@drawable/health_blood"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_health_bloodoxygen"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="血氧监测"
+                                        android:textColor="@color/c_33"
+                                        android:textSize="14sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_health_bloodoxygen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="%"
+                                        android:textColor="@color/c_66"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_xy_state"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="待测"
+                                        android:textColor="@color/c_58A360"
+                                        android:textSize="18sp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_8"
+                            android:layout_marginTop="1dp"
+                            android:background="@color/c_ffffff"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="8dp">
+
+                            <LinearLayout
+                                android:id="@+id/sd_health_bloodpress"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="2"
+                                    android:gravity="center">
+
+                                    <com.facebook.drawee.view.SimpleDraweeView
+                                        android:layout_width="@dimen/health_shui_mian_icon_wh"
+                                        android:layout_height="@dimen/health_shui_mian_icon_wh"
+                                        fresco:actualImageScaleType="focusCrop"
+                                        fresco:placeholderImage="@drawable/health_pressure"/>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_health_bloodpress"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="血压监测"
+                                        android:textColor="@color/c_33"
+                                        android:textSize="14sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_health_bloodpress"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text=" mmhg"
+                                        android:textColor="@color/c_66"
+                                        android:layout_marginBottom="2dp"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_health_bloodpress_state"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="待测"
+                                        android:textColor="@color/c_58A360"
+                                        android:textSize="18sp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/c_f2"
+                                android:gravity="center"/>
+
+                            <LinearLayout
+                                android:id="@+id/sd_health_sleep"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp"
+                                android:orientation="horizontal"
+                               >
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="2"
+                                    android:gravity="center">
+
+                                    <com.facebook.drawee.view.SimpleDraweeView
+                                        android:layout_width="@dimen/health_shui_mian_icon_wh"
+                                        android:layout_height="@dimen/health_shui_mian_icon_wh"
+                                        fresco:actualImageScaleType="focusCrop"
+                                        fresco:placeholderImage="@drawable/health_sleep"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_health_sleep"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="2dp"
+                                        android:gravity="center_horizontal"
+                                        android:text="睡眠监测"
+                                        android:textColor="@color/c_33"
+                                        android:textSize="14sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_sleep"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="2dp"
+                                        android:gravity="center_horizontal"
+                                        android:text="小时 分钟"
+                                        android:textColor="@color/c_66"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_sleep_state"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="待测"
+                                        android:textColor="@color/c_58A360"
+                                        android:textSize="18sp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/c_ffffff"/>
+
+                        <TextView
+                            android:id="@+id/tv_sport_mode"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/text_lv_circl"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="日常\n模式"
+                            android:textColor="@color/c_33"
+                            android:textSize="12sp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/c_f2"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_health_shake_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/c_f2"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/c_ffffff"
+                        android:padding="@dimen/health_shui_mian_icon_bottom"
+                        android:text="震动提醒"
+
+                        android:textColor="@color/color_title"
+                        android:textSize="14sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/c_ffffff"
+                        android:gravity="bottom"
+                        android:orientation="horizontal"
+                        android:paddingBottom="6dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="@dimen/health_zhen_dong_icon_wh"
+                                android:layout_height="@dimen/health_zhen_dong_icon_wh"
+                                fresco:actualImageScaleType="focusCrop"
+                                fresco:placeholderImage="@drawable/health_phone"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="电话"
+                                android:textColor="@color/c_33"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="@dimen/health_zhen_dong_icon_wh"
+                                android:layout_height="@dimen/health_zhen_dong_icon_wh"
+                                fresco:actualImageScaleType="focusCrop"
+                                fresco:placeholderImage="@drawable/health_note"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="短信"
+                                android:textColor="@color/c_33"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="@dimen/health_zhen_dong_icon_wh"
+                                android:layout_height="@dimen/health_zhen_dong_icon_wh"
+                                fresco:actualImageScaleType="focusCrop"
+                                fresco:placeholderImage="@drawable/health_clock"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+
+                                android:text="闹钟"
+                                android:textColor="@color/c_33"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="@dimen/health_zhen_dong_icon_wh"
+                                android:layout_height="@dimen/health_zhen_dong_icon_wh"
+                                fresco:actualImageScaleType="focusCrop"
+                                fresco:placeholderImage="@drawable/health_objective"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+
+                                android:text="目标"
+                                android:textColor="@color/c_33"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/simpleDraweeView6"
+                                android:layout_width="@dimen/health_zhen_dong_icon_wh"
+                                android:layout_height="@dimen/health_zhen_dong_icon_wh"
+                                fresco:actualImageScaleType="focusCrop"
+                                fresco:placeholderImage="@drawable/health_sedent"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+
+                                android:text="久坐"
+                                android:textColor="@color/c_33"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="@dimen/health_zhen_dong_icon_wh"
+                                android:layout_height="@dimen/health_zhen_dong_icon_wh"
+                                fresco:actualImageScaleType="focusCrop"
+                                fresco:placeholderImage="@drawable/health_lose"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+
+                                android:text="防丢"
+                                android:textColor="@color/c_33"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/c_f2"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

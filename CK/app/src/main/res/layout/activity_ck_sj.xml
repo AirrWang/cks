@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_ck_sj"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ckjs.ck.Android.HomeModule.Activity.CkSjActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center_vertical"
+        android:background="@color/c_33"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:paddingLeft="10dp"
+            android:id="@+id/sd_fh"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@drawable/calendar_icon2_left"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn">
+
+        </com.facebook.drawee.view.SimpleDraweeView>
+        <TextView
+            android:id="@+id/tv_jsf"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="4dp"
+            android:drawableRight="@drawable/down_up"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp"
+
+            android:text="按机构"
+            android:textColor="@color/c_ffffff"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/c_ffffff"
+            android:gravity="center"
+            android:hint="附近"
+            android:textColor="@color/c_33"
+            android:textSize="14sp"/>
+
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="58dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_rectangle_circl_5"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/c_ffffff"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lv_home_jsf_sj_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_top"
+        android:divider="@color/c_f2"
+        android:dividerHeight="10dp"/>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_top"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="#1ababcbc"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/jsf"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="机构"
+                android:background="@color/c_1ababcbc"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/c_90c33" />
+
+            <TextView
+                android:id="@+id/people"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="个人"
+                android:background="@color/c_1ababcbc"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@color/c_90c33"
+            android:paddingLeft="1dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/near"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="附近搜索"
+                android:textColor="@color/c_33"
+                android:background="@color/c_1ababcbc"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/c_90c33" />
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="城市搜索"
+                android:background="@color/c_1ababcbc"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

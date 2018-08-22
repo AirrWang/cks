@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_nfc"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="门禁系统编程"
+            android:textColor="@color/c_ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/home_item_button_green_10_bootom"></TextView>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/textView71"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="23dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:fadeDuration="1"
+            fresco:placeholderImage="@drawable/key_progiamme_sing"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:viewAspectRatio="1" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView71"
+        android:background="@drawable/home_item_button_bai_10_bootom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView81"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/textView82"
+                android:layout_toRightOf="@+id/textView82"
+                android:text="门禁密钥"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/tv_nfc_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView81"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="4dp"
+                android:layout_toEndOf="@+id/textView82"
+                android:layout_toRightOf="@+id/textView82"
+                android:text=""
+                android:textColor="@color/c_4491F2"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textView72"
+            android:background="@color/c_be" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView81"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/textView82"
+                android:layout_toRightOf="@+id/textView82"
+                android:text="门店名称"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_nfc_relname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView81"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/textView82"
+                android:layout_toRightOf="@+id/textView82"
+                android:text=""
+                android:singleLine="true"
+                android:layout_marginRight="4dp"
+                android:textColor="@color/c_66"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textView82"
+            android:layout_marginBottom="15dp"
+            android:background="@color/c_be" />
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="115dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_rectangle_circl_5"
+            android:text="确定写入"
+            android:textColor="@color/c_ffffff" />
+    </LinearLayout>
+
+
+</LinearLayout>

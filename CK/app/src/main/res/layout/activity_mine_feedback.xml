@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2">
+    <include layout="@layout/toolbar"/>
+    <EditText
+        android:id="@+id/mine_feedback"
+        android:gravity="top"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/c_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:hint="  感谢您的反馈，您的意见和建议，对我们非常重要......"
+        android:textColorHint="@color/c_99"
+        android:textSize="12sp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_item_button_bai_5"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="31dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="支付前请仔细阅读"
+            android:textColor="@color/c_33"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="31dp"
+            android:layout_toEndOf="@+id/tv_1"
+            android:layout_toRightOf="@+id/tv_1"
+            android:gravity="center"
+            android:text="租赁协议"
+            android:textColor="@color/color_de4b37"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="31dp"
+            android:layout_toEndOf="@+id/tv_2"
+            android:layout_toRightOf="@+id/tv_2"
+            android:gravity="center"
+            android:text="，点击"
+            android:textColor="@color/c_33"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="31dp"
+            android:layout_toEndOf="@+id/tv_11"
+            android:layout_toRightOf="@+id/tv_11"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="支付押金"
+            android:textColor="@color/color_de4b37"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl"
+        android:layout_marginBottom="23dp"
+        android:gravity="center"
+        android:text="即代表同意并认可此协议"
+        android:textColor="@color/c_33"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_xy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_3"
+        android:layout_marginBottom="17dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginRight="10dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:fadeDuration="1"
+            fresco:placeholderImage="@drawable/choice_pay"
+            fresco:placeholderImageScaleType="fitCenter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《超空手环租赁协议》"
+            android:textColor="@color/color_de4b37"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttonPay"
+        android:layout_width="140dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/ll_xy"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/button_rectangle_circl_5"
+        android:text="支付押金"
+        android:textColor="@color/c_ffffff"/>
+</RelativeLayout>

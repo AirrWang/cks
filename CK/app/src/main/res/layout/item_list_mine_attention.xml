@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@drawable/home_item_button_bai_5"
+    android:gravity="center_vertical">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/mine_attention_pic"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="@dimen/historyscore_tb"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="1"
+        fresco:placeholderImage="@color/c_e6"
+        fresco:placeholderImageScaleType="focusCrop"
+        fresco:pressedStateOverlayImage="@drawable/text_rdio_bg"
+       />
+    <TextView
+        android:id="@+id/mine_attention_name"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/c_33"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" 
+        android:layout_weight="1"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="10dp"
+        fresco:placeholderImage="@drawable/personal_focus_viewall"
+        android:layout_height="20dp" />
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerGuide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/to_go_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/c_ffffff"
+            android:visibility="gone"
+            android:background="@drawable/bg_item_lan"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text=" 立即进入 "/>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton01"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/radio_selector_new"
+
+            android:button="@color/c_FFFDFD" />
+
+        <RadioButton
+            android:id="@+id/radioButton02"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/radio_selector_new"
+
+            android:button="@color/c_FFFDFD" />
+
+        <RadioButton
+            android:id="@+id/radioButton03"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/radio_selector_new"
+
+            android:button="@color/c_FFFDFD" />
+
+        <RadioButton
+            android:id="@+id/radioButton04"
+            android:layout_width="8dp"
+            android:visibility="gone"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/radio_selector_new"
+            android:button="@color/c_FFFDFD" />
+    </RadioGroup>
+
+</FrameLayout>

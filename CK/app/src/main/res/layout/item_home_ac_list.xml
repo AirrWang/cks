@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_f2"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/c_f2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivSm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@color/c_e6"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:pressedStateOverlayImage="@color/c_50f0eff5"
+            fresco:viewAspectRatio="2.5" />
+
+        <TextView
+
+            android:id="@+id/textViewLx"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/ff1e00_99"
+            android:gravity="center"
+            android:text="活动类型"
+            android:visibility="gone"
+            android:textColor="@color/c_ffffff"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_ffffff"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="name"
+        android:textColor="@color/c_33"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/c_ffffff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp">
+
+        <TextView
+
+            android:id="@+id/textViewZt"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@color/fea21249"
+            android:gravity="center"
+            android:text="状态"
+            android:textColor="@color/c_ffffff"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="时间"
+            android:textColor="@color/c_33"
+            android:textSize="12sp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdRen"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@drawable/activity_join"
+            fresco:placeholderImageScaleType="focusCrop" />
+
+        <TextView
+            android:id="@+id/textViewNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingRight="10dp"
+            android:text="人数"
+            android:textColor="@color/c_33"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

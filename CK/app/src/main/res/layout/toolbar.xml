@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColorPrimary="@color/c_ffffff"
+    app:popupTheme="@style/Toobar"
+    app:theme="@style/Toobar">
+
+    <RelativeLayout
+        android:id="@+id/l_toolbar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="left|center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/toolbar_pretitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:padding="6dp"
+            android:background="@drawable/bg_toobar_btn"
+            android:singleLine="true"
+            android:textColor="@color/c_babcbc"
+            android:textSize="16sp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/left_button"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            fresco:actualImageScaleType="fitCenter"
+            android:layout_marginLeft="6dp"
+            fresco:fadeDuration="3"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:ems="8"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/c_babcbc"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/r_toolbar_button"
+        android:layout_width="64dp"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="right|center_vertical">
+
+        <TextView
+            android:id="@+id/toolbar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_toobar_btn"
+            android:layout_marginRight="16dp"
+            android:padding="6dp"
+            android:textColor="@color/c_babcbc"
+            android:textSize="16sp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_button"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerInParent="true"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn" />
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

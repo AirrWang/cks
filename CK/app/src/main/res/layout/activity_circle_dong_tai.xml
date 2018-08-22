@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_circle_dong_tai"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_ffffff">
+
+    <include layout="@layout/my_toolbar">
+
+    </include>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/my_toolbar">-->
+
+        <RelativeLayout
+            android:layout_below="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/c_ffffff"
+                android:gravity="top"
+                android:hint="此刻的想法。。。"
+                android:padding="10dp"
+                android:textColor="@color/c_66"
+                android:textColorHint="@color/c_99"
+                android:textSize="14sp" />
+
+            <com.ckjs.ck.Tool.ViewTool.MyGridView
+                android:id="@+id/sdAddIc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView18"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="4"
+                android:verticalSpacing="10dp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/textView20"
+                android:layout_width="37dp"
+                android:layout_height="22dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/sdAddIc"
+                android:paddingBottom="3dp"
+                android:paddingLeft="13dp"
+                android:paddingRight="4dp"
+                android:paddingTop="3dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImage="@drawable/publish_dingwei"
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn" />
+
+
+            <TextView
+
+                android:id="@+id/tv_palce"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_alignBottom="@+id/textView20"
+                android:layout_alignTop="@+id/textView20"
+                android:layout_below="@+id/sdAddIc"
+                android:layout_toEndOf="@+id/textView20"
+                android:layout_toRightOf="@+id/textView20"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/textView20"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="9dp"
+                android:background="@color/c_e6" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/textView29"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView22"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImage="@drawable/publish_fenxiang"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_alignBottom="@+id/textView29"
+                android:layout_alignTop="@+id/textView29"
+                android:layout_below="@+id/textView22"
+                android:layout_marginRight="25dp"
+                android:layout_toEndOf="@+id/textView29"
+                android:layout_toRightOf="@+id/textView29"
+                android:gravity="center_vertical"
+                android:text="同步分享到:"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/textView35"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_below="@+id/textView22"
+                android:layout_toEndOf="@+id/textView34"
+                android:layout_toRightOf="@+id/textView34"
+                android:text="TextView"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImage="@drawable/publish_qq_normal"
+                fresco:placeholderImageScaleType="focusCrop"
+
+                fresco:pressedStateOverlayImage="@drawable/publish_qq_pressed" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/textView36"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_below="@+id/textView22"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="35dp"
+                android:layout_toEndOf="@+id/textView35"
+                android:layout_toRightOf="@+id/textView35"
+                android:text="TextView"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImage="@drawable/publish_wechat_normal"
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:pressedStateOverlayImage="@drawable/publish_wechat_pressed" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/textView37"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_below="@+id/textView22"
+                android:layout_marginLeft="35dp"
+                android:layout_toEndOf="@+id/textView36"
+                android:layout_toRightOf="@+id/textView36"
+                android:text="TextView"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImage="@drawable/publish_microblog_normal"
+
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:pressedStateOverlayImage="@drawable/publish_micrblog_pressed" />
+        </RelativeLayout>
+    <!--</ScrollView>-->
+</RelativeLayout>

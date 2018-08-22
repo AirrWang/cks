@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/c_ffffff"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="超空智能手环编程"
+            android:background="@drawable/home_item_button_green_10_bootom"></TextView>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/textView71"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="23dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:fadeDuration="1"
+            fresco:placeholderImage="@drawable/progiamme_header"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:viewAspectRatio="1" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView71"
+        android:background="@drawable/home_item_button_bai_10_bootom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="166dp"
+            android:id="@+id/ll_vip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="22dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="1"
+                fresco:placeholderImage="@drawable/progiamme_card"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="22dp"
+                android:gravity="center_vertical"
+                android:text="会员系统编程"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="166dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textView72"
+            android:background="@color/c_be" />
+
+        <LinearLayout
+            android:id="@+id/ll_mj"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="10dp"
+
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="1"
+                fresco:placeholderImage="@drawable/progiamme_sing"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView78"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+
+                android:text="门禁系统编程"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="166dp"
+            android:layout_height="1dp"
+            android:background="@color/c_be" />
+
+        <LinearLayout
+            android:id="@+id/ll_qd"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView81"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="10dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="1"
+                fresco:placeholderImage="@drawable/progiamme_entrance"
+                fresco:placeholderImageScaleType="focusCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView81"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="上课签到编程"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="166dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="28dp"
+            android:background="@color/c_be" />
+    </LinearLayout>
+</LinearLayout>

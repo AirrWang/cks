@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+    //实心颜色
+    <solid android:color="@color/c_f2" />
+    //圆宽高
+    <size
+        android:width="50dp"
+        android:height="80dp"/>
+        <!--android:width="@dimen/text_rdio_recommmend_wh"-->
+        <!--android:height="@dimen/text_rdio_recommmend_wh" />-->
+</shape>

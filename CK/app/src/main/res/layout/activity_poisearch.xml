@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="@color/c_50f0eff5"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@color/c_5007ac83"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/c_e6"
+            android:text="在"></TextView>
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京"
+
+            android:textColor="@color/c_ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/c_e6"
+            android:text="市内找"></TextView>
+
+        <AutoCompleteTextView
+            android:id="@+id/searchkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.88"
+            android:textColorHint="@color/c_ffffff"
+            android:hint="请输入搜索内容,如超空门店"
+            android:textColor="@color/c_ffffff"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:background="@color/c_5007ac83"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_weight="12"
+            android:background="@drawable/bg_item_lan_8"
+            android:onClick="searchButtonProcess"
+            android:padding="10dip"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="城市内搜索"
+            android:textSize="10sp"
+            android:textColor="@color/c_ffffff" />
+
+        <Button
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/searchNearby"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_weight="12"
+            android:background="@drawable/bg_item_lan_8"
+            android:onClick="searchNearbyProcess"
+            android:padding="10dip"
+            android:text="周边搜索"
+            android:textSize="10sp"
+            android:textColor="@color/c_ffffff" />
+
+        <Button
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/searchBound"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_weight="12"
+            android:background="@drawable/bg_item_lan_8"
+            android:onClick="searchBoundProcess"
+            android:padding="10dip"
+            android:text="区域搜索"
+            android:textSize="10sp"
+            android:visibility="gone"
+            android:textColor="@color/c_ffffff" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        class="com.baidu.mapapi.map.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

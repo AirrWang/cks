@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:padding="12dp">
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/btn_yuyue"
+        android:layout_toStartOf="@+id/btn_yuyue"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/c_33"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/btn_yuyue"
+        android:layout_toStartOf="@+id/btn_yuyue"
+        android:background="@color/c_ffffff"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_call"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="10dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:fadeDuration="1"
+            fresco:placeholderImage="@drawable/store_phone"
+            fresco:viewAspectRatio="0.59" />
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/c_66"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_dw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_call"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/tv_distance_m"
+        android:layout_toStartOf="@+id/tv_distance_m"
+        android:background="@color/c_ffffff"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_dw"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:fadeDuration="1"
+            fresco:placeholderImage="@drawable/store_location"
+            fresco:viewAspectRatio="0.59" />
+
+        <TextView
+            android:id="@+id/tv_adr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/c_66"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_distance_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_dw"
+        android:layout_alignTop="@+id/tv_dw"
+        android:layout_below="@+id/ll_call"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/btn_yuyue"
+        android:layout_toStartOf="@+id/btn_yuyue"
+        android:layout_weight="1"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:textColor="@color/fea21249"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btn_yuyue"
+        android:layout_width="68dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/bg_yy_btn"
+        android:text="预约"
+        android:textColor="@color/c_ffffff"
+        android:textSize="12sp" />
+</RelativeLayout>

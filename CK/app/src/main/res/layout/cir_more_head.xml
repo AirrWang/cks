@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_circle_recommen_more"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="10dp"
+        android:background="@color/c_ffffff">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="10dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@color/c_e6"
+            />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/sdIcon"
+            android:layout_toRightOf="@+id/sdIcon"
+            android:textColor="@color/c_33" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_xb"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@+id/textViewName"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/textViewName"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/textViewName"
+            android:layout_toRightOf="@+id/textViewName"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImageScaleType="focusCrop" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewName"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/sdIcon"
+            android:layout_toRightOf="@+id/sdIcon"
+            android:textColor="@color/c_99"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textViewGz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/fea21249"
+            android:gravity="right"
+            android:paddingBottom="4dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:text="  关 注  "
+            android:textColor="@color/c_ffffff"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/r"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTime"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@+id/vp_circle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sd_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="3"
+                fresco:placeholderImage="@color/c_e6"
+                fresco:viewAspectRatio="1" />
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/sd_pic"-->
+            <!--android:layout_alignRight="@+id/sd_pic"-->
+            <!--android:visibility="gone"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_point"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:visibility="gone"-->
+            <!--android:orientation="horizontal"></LinearLayout>-->
+            <!--</LinearLayout>-->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_conten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/r"
+            android:lineSpacingExtra="5dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text=""
+            android:textColor="@color/c_66"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayoutTop"
+        android:background="@color/c_ffffff"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="全部评论"
+        android:textColor="@color/c_33"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

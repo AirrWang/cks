@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_jsf_more"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2"
+    android:orientation="vertical"
+    tools:context="com.ckjs.ck.Android.HomeModule.Activity.HomeJsfMoreActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ffffff">
+
+                <com.ckjs.ck.Tool.ViewTool.AutoScrollViewPager
+                    android:id="@+id/vp_home_js_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_centerInParent="true" />
+
+                <LinearLayout
+                    android:id="@+id/ll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/vp_home_js_more"
+                    android:layout_alignRight="@+id/vp_home_js_more"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/c_ffffff"
+                android:gravity="center"
+
+                >
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_jp_jl"
+                    android:layout_width="44dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/tv_center"
+                    android:layout_toStartOf="@+id/tv_center"
+                    android:paddingTop="8dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="3"
+                    fresco:placeholderImage="@drawable/gym_icon_coach"
+                    fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn" />
+
+                <TextView
+                    android:id="@+id/tv_jin_pai_jl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sd_jp_jl"
+                    android:layout_gravity="center"
+                    android:layout_toLeftOf="@+id/tv_center"
+                    android:layout_toStartOf="@+id/tv_center"
+                    android:gravity="center"
+                    android:paddingTop="1dp"
+                    android:text="金牌教练"
+                    android:textColor="@color/c_33"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_center"
+                    android:layout_width="2dp"
+                    android:layout_height="66dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/c_f2"
+                    android:text="" />
+
+
+                <TextView
+                    android:id="@+id/tv_ck_th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/sd_ck_th"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@+id/tv_center"
+                    android:layout_toRightOf="@+id/tv_center"
+                    android:gravity="center"
+                    android:paddingTop="1dp"
+                    android:text="超空特惠"
+                    android:textColor="@color/c_33"
+                    android:textSize="14sp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_ck_th"
+                    android:layout_width="44dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/tv_center"
+                    android:layout_toRightOf="@+id/tv_center"
+                    android:paddingTop="8dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="3"
+                    fresco:placeholderImage="@drawable/gym_youhui"
+                    fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/c_ffffff"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/store_members"
+                    fresco:viewAspectRatio="0.59" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:paddingRight="4dp"
+                    android:text="店内现有会员量："
+                    android:textColor="@color/c_66"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/my_boy"
+                    fresco:viewAspectRatio="0.59" />
+
+                <TextView
+                    android:id="@+id/tv_nan_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingRight="4dp"
+                    android:text=""
+                    android:textColor="@color/c_66"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/my_girl"
+                    fresco:viewAspectRatio="0.59" />
+
+
+                <TextView
+                    android:id="@+id/tv_nv_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingRight="4dp"
+                    android:text=""
+                    android:textColor="@color/c_66"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/c_ffffff"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/store_collect"
+                    fresco:viewAspectRatio="0.59" />
+
+                <TextView
+                    android:id="@+id/tv_gz_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="4dp"
+                    android:text=""
+                    android:textColor="@color/c_66"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@color/c_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_dw"
+                    android:layout_width="40dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="goToDwSd"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="8dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/store_location"
+                    fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn"
+                    fresco:viewAspectRatio="0.59" />
+
+                <TextView
+                    android:id="@+id/tv_adr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    android:text=""
+                    android:textColor="@color/c_66"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/c_ffffff"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sd_call"
+                    android:layout_width="40dp"
+                    android:layout_height="36dp"
+                    android:onClick="goToCall"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="8dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:fadeDuration="1"
+                    fresco:placeholderImage="@drawable/store_phone"
+                    fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn"
+                    fresco:viewAspectRatio="0.59" />
+
+                <TextView
+                    android:id="@+id/tv_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="goToCall"
+                    android:paddingRight="4dp"
+                    android:text=""
+                    android:textColor="@color/c_66"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_md_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/c_ffffff"
+                android:padding="10dp"
+                android:text="门店介绍"
+                android:textColor="@color/c_33"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_md_js"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/c_ffffff"
+                android:lineSpacingExtra="5dp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/c_66"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="64dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

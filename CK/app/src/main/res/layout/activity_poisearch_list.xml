@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@color/c_50f0eff5">
+
+    <LinearLayout
+        android:id="@+id/ll_9"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center_vertical"
+        android:background="@color/c_33"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/sd_fh"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            fresco:actualImageScaleType="centerInside"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@drawable/back_one"
+            fresco:placeholderImageScaleType="centerInside"
+            fresco:pressedStateOverlayImage="@drawable/bg_toobar_btn">
+
+        </com.facebook.drawee.view.SimpleDraweeView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/c_ffffff"/>
+
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/c_ffffff"
+            android:gravity="center"
+            android:hint="按城市列表显示"
+            android:textColor="@color/c_33"
+            android:textSize="14sp"/>
+
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="58dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_rectangle_circl_5"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/c_ffffff"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <com.amap.api.maps.MapView
+        android:layout_below="@+id/ll_9"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/ll_share"
+        android:background="@drawable/text_retangle_biankuang_lv"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="33dp">
+        <LinearLayout
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:background="#9507ac83"
+            android:layout_height="match_parent">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="1"
+                fresco:placeholderImage="@drawable/cash_pledge"
+                fresco:placeholderImageScaleType="focusCrop"
+                 />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80bebebe"
+            android:gravity="center"
+            android:text="请到地图标记的门店内寻找共享手环"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

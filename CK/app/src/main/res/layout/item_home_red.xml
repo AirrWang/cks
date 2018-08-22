@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/c_f2" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivSm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="3"
+        fresco:placeholderImage="@color/c_e6"
+        fresco:placeholderImageScaleType="focusCrop"
+        fresco:pressedStateOverlayImage="@color/c_50f0eff5"
+        fresco:viewAspectRatio="2.5" />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_tag"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@color/c_e6"
+            fresco:placeholderImageScaleType="focusCrop"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+
+        android:textColor="@color/c_33"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewJs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        android:textColor="@color/c_99"
+        android:textSize="12sp" />
+</LinearLayout>

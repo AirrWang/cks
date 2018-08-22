@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+    //边框颜色
+    <stroke
+        android:width="2dp"
+        android:color="@color/c_4491F2" />
+    //圆宽高
+    <size
+        android:width="50dp"
+        android:height="50dp"/>
+        <!--android:width="@dimen/text_rdio_recommmend_wh"-->
+        <!--android:height="@dimen/text_rdio_recommmend_wh" />-->
+</shape>

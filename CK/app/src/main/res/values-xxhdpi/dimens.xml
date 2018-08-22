@@ -1,0 +1,14 @@
+<resources>
+    <!--//健康监测适配-->
+    <dimen name="health_shui_mian_icon_wh">32dp</dimen>
+    <dimen name="health_zhen_dong_icon_wh">26dp</dimen>
+    <dimen name="health_shui_mian_icon_top">1dp</dimen>
+    <dimen name="health_shui_mian_icon_bottom">7.5dp</dimen>
+    <dimen name="health_run_top">12dp</dimen>
+    <dimen name="health_shui_mian_icon_bottom_end">7.5dp</dimen>
+    <dimen name="health_6">4dp</dimen>
+
+    <dimen name="dshipinOne">18sp</dimen>
+    <dimen name="dshipin">18sp</dimen>
+    <dimen name="dshipinTop">4dp</dimen>
+</resources>

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutHealth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/c_f2"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/c_ffffff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@color/c_ffffff"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="@dimen/health_shui_mian_icon_bottom"
+
+                        android:text="体重管理"
+                        android:textColor="@color/color_title"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/mine_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center|right"
+                        android:paddingRight="8dp"
+                        android:text=""
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/mine_editheight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/mine_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 "
+                            android:textColor="#333333"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="KG"
+                            android:textColor="#999999"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/c_ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp">
+
+                        <TextView
+                            android:id="@+id/mine_bmi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BMI:"
+                            android:textColor="#fea249"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_biao_zhun_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="最佳体重:"
+                            android:textColor="#fea249"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/mine_bmipic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/mine_littlesanjiao"
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                fresco:placeholderImage="@drawable/personal_down_new"
+                                fresco:placeholderImageScaleType="focusCrop"
+                                fresco:viewAspectRatio="2" />
+                        </LinearLayout>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mine_bmibottompic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            fresco:actualImageScaleType="focusCrop"
+                            fresco:placeholderImage="@drawable/personal_bmi_new"
+                            fresco:placeholderImageScaleType="focusCrop"
+                            fresco:viewAspectRatio="17.45" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            fresco:placeholderImage="@drawable/personal_icon1"
+                            fresco:roundAsCircle="true"
+                            fresco:roundedCornerRadius="50dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="偏瘦"
+                            android:textColor="#666666"
+                            android:textSize="10dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_marginLeft="6dp"
+                            fresco:placeholderImage="@drawable/personal_icon2"
+                            fresco:roundAsCircle="true"
+                            fresco:roundedCornerRadius="50dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="正常"
+                            android:textColor="#666666"
+                            android:textSize="10dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_marginLeft="6dp"
+                            fresco:placeholderImage="@drawable/personal_icon3"
+                            fresco:roundAsCircle="true"
+                            fresco:roundedCornerRadius="50dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="偏胖"
+                            android:textColor="#666666"
+                            android:textSize="10dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_marginLeft="6dp"
+                            fresco:placeholderImage="@drawable/personal_icon4"
+                            fresco:roundAsCircle="true"
+                            fresco:roundedCornerRadius="50dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="肥胖"
+                            android:textColor="#666666"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/mine_bmr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/health_shui_mian_icon_bottom"
+                        android:layout_marginTop="@dimen/health_shui_mian_icon_bottom"
+
+
+                        android:text="基础代谢代谢为"
+                        android:textColor="@color/fea21249"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/c_ffffff"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="@dimen/health_shui_mian_icon_bottom"
+                    android:text="综合评估"
+                    android:textColor="@color/color_title"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/mine_subscribe_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_item"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="48dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                fresco:placeholderImage="@drawable/mine_rectangle_1"
+                                fresco:placeholderImageScaleType="focusCrop" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="缺乏"
+                                android:textColor="@color/c_66"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                fresco:placeholderImage="@drawable/mine_rectangle_2"
+                                fresco:placeholderImageScaleType="focusCrop" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="正常"
+                                android:textColor="@color/c_66"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                fresco:placeholderImage="@drawable/mine_rectangle_3"
+                                fresco:placeholderImageScaleType="focusCrop" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="过量"
+                                android:textColor="@color/c_66"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/mine_body_info_detail"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/ll_top"
+                        android:layout_marginTop="25dp"
+                        fresco:placeholderImage="@drawable/body_test"
+                        fresco:placeholderImageScaleType="focusCrop" />
+
+                    <TextView
+                        android:id="@+id/tv_mine_body_info_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mine_body_info_detail"
+                        android:layout_marginTop="8dp"
+                        android:text="体测详情"
+                        android:textColor="@color/c_33"
+                        android:textSize="10sp" />
+
+                    <GridView
+                        android:id="@+id/mine_body_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/ll_top"
+                        android:layout_toRightOf="@+id/ll_top"
+                        android:gravity="center"
+                        android:numColumns="6" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/mine_body_info"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toEndOf="@+id/ll_top"
+                        android:layout_toRightOf="@+id/ll_top">
+
+                        <Button
+                            android:id="@+id/mine_re_yuyue"
+                            android:layout_width="84dp"
+                            android:layout_height="28dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_order_btn"
+                            android:text="再次体测"
+                            android:textColor="@color/c_ffffff"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/mine_subscribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/c_ffffff"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/health_shui_mian_icon_bottom"
+                        android:layout_marginTop="4dp"
+                        android:text="前往门店进行免费体测，即可查看"
+                        android:textColor="@color/c_33"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btn_yj"
+                        android:layout_width="105dp"
+                        android:layout_height="34dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_order_btn"
+                        android:text="预约体测"
+                        android:textColor="@color/c_ffffff"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="left">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_gravity="center"
+                                fresco:placeholderImage="@drawable/personal_icon2"
+                                fresco:roundAsCircle="true"
+                                fresco:roundedCornerRadius="50dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:text="身体成分分析"
+                                android:textColor="@color/fea21249"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_gravity="center"
+                                fresco:placeholderImage="@drawable/personal_icon2"
+                                fresco:roundAsCircle="true"
+                                fresco:roundedCornerRadius="50dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:text="肥胖分析"
+                                android:textColor="@color/fea21249"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="right">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_gravity="center"
+                                fresco:placeholderImage="@drawable/personal_icon2"
+                                fresco:roundAsCircle="true"
+                                fresco:roundedCornerRadius="50dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:text="肌肉脂肪分析"
+                                android:textColor="@color/fea21249"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="right">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_gravity="center"
+                                fresco:placeholderImage="@drawable/personal_icon2"
+                                fresco:roundAsCircle="true"
+                                fresco:roundedCornerRadius="50dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:text="营养评估"
+                                android:textColor="@color/fea21249"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.ckjs.ck.Tool.ViewTool.MyListView
+                    android:id="@+id/listViewHealthCustomized"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="9dp"
+                    android:divider="@color/c_f2"
+                    android:dividerHeight="9dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:paddingRight="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_coach_order_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_center"
+        android:layout_toStartOf="@+id/tv_center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        android:textColor="@color/c_33"
+        android:textSize="14sp" />
+
+    <TextView
+
+        android:id="@+id/tv_coach_order_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_coach_order_name"
+        android:layout_toLeftOf="@+id/tv_center"
+        android:layout_toStartOf="@+id/tv_center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="@color/c_66"
+        android:textSize="12sp" />
+     <TextView
+         android:id="@+id/tv_center"
+         android:layout_centerInParent="true"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_coach_order_name"
+        android:layout_toRightOf="@+id/tv_coach_order_name"
+        android:padding="8dp"
+        android:text="TextView"
+        android:textColor="@color/c_33"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_coach_order_tixian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tv_center"
+        android:layout_toRightOf="@+id/tv_center"
+        android:gravity="right"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/c_33"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_coach_order_dakuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_coach_order_tixian"
+        android:layout_toEndOf="@+id/tv_center"
+        android:layout_toRightOf="@+id/tv_center"
+        android:gravity="right"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:textColor="@color/c_66"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_coach_order_shouyi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/tv_center"
+        android:layout_toRightOf="@+id/tv_center"
+        android:gravity="right"
+        android:textColor="@color/fea21249"
+        android:textSize="14sp" />
+</RelativeLayout>

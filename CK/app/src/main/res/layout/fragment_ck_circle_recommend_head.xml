@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_ffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingBottom="4dp"
+    >
+
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c_f2" />
+
+    <com.ckjs.ck.Tool.ViewTool.MyListView
+        android:id="@+id/ck_circle_recommend_head_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llTrain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:divider="@color/c_f6" />
+
+    <LinearLayout
+        android:paddingTop="4dp"
+        android:layout_below="@+id/line"
+        android:id="@+id/llPopularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/tv_zw"
+        android:layout_toStartOf="@+id/tv_zw"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:text="人气榜">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/textViewPopularity"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@drawable/sentiment_pressed"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:pressedStateOverlayImage="@drawable/sentiment_pressed" />
+
+        <TextView
+            android:id="@+id/tv_ren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="人气榜"
+            android:textColor="@color/c_33"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_zw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:paddingTop="4dp"
+        android:layout_below="@+id/line"
+        android:id="@+id/llTrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/tv_zw"
+        android:layout_toRightOf="@+id/tv_zw"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/textViewTrain"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="3"
+            fresco:placeholderImage="@drawable/training_normal"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:pressedStateOverlayImage="@drawable/training_pressed" />
+
+        <TextView
+            android:id="@+id/tv_xun_lian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="训练榜"
+            android:textColor="@color/c_33"
+            android:textSize="10sp" />
+    </LinearLayout>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdMore"
+        android:layout_width="30dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:fadeDuration="3"
+        fresco:placeholderImage="@drawable/cks_ranking_list"
+        fresco:placeholderImageScaleType="fitCenter"
+         />
+
+</RelativeLayout>
